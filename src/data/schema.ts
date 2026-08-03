@@ -12,16 +12,18 @@ export const StopSchema = z.object({
     .string()
     .regex(
       /^[a-z]+:[A-Za-z0-9_-]+$/,
-      'id must be namespaced, e.g. "osm:1234567890"',
+      'id must be namespaced, e.g. "gtfs:U1234"',
     ),
   name: z.string().min(1),
   lat: z.number(),
   lon: z.number(),
   emoji: z.string().optional(),
+  lines: z.array(z.string()).default([]),
   source: z
     .object({
       kind: z.enum(['osm', 'gtfs', 'jdf']),
       osmId: z.number().optional(),
+      gtfsStopId: z.string().optional(),
       officialRef: z.string().optional(),
     })
     .optional(),
@@ -31,3 +33,23 @@ export type Stop = z.infer<typeof StopSchema>;
 
 /** A list of stops, validated as a whole. */
 export const StopsFileSchema = z.array(StopSchema);
+
+/**
+ * A tram line. `id` is the line number as a string, e.g. "12".
+ * `stopIds` is the source of truth for membership; `Stop.lines` is the
+ * denormalized reverse, computed by the fetcher.
+ */
+export const LineSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  routeColor: z
+    .string()
+    .regex(/^#[0-9a-fA-F]{6}$/, 'routeColor must be hex like "#E2001A"')
+    .optional(),
+  stopIds: z.array(z.string()),
+});
+
+export type Line = z.infer<typeof LineSchema>;
+
+/** A list of lines, validated as a whole. */
+export const LinesFileSchema = z.array(LineSchema);
