@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "id": "osm:624603259",
+    "name": "Česká",
+    "lat": 49.1983578,
+    "lon": 16.6056614,
+    "emoji": "🚋",
+    "source": {
+      "kind": "osm",
+      "osmId": 624603259
+    }
+  },
+  {
+    "id": "osm:12229764869",
+    "name": "Hlavní nádraží",
+    "lat": 49.1918186,
+    "lon": 16.613572,
+    "emoji": "🚆",
+    "source": {
+      "kind": "osm",
+      "osmId": 12229764869
+    }
+  },
+  {
+    "id": "osm:3339546839",
+    "name": "Mendlovo náměstí",
+    "lat": 49.1900106,
+    "lon": 16.5933993,
+    "emoji": "🚋",
+    "source": {
+      "kind": "osm",
+      "osmId": 3339546839
+    }
+  },
+  {
+    "id": "osm:3374741501",
+    "name": "Moravské náměstí",
+    "lat": 49.1992329,
+    "lon": 16.6080801,
+    "emoji": "🚋",
+    "source": {
+      "kind": "osm",
+      "osmId": 3374741501
+    }
+  },
+  {
+    "id": "osm:6202321546",
+    "name": "Pisárky",
+    "lat": 49.1935866,
+    "lon": 16.5696472,
+    "emoji": "🚋",
+    "source": {
+      "kind": "osm",
+      "osmId": 6202321546
+    }
+  }
+]
