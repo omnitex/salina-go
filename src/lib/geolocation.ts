@@ -12,9 +12,11 @@ export type GeoErrorKind =
   | 'timeout';
 
 export class GeoError extends Error {
-  constructor(public readonly kind: GeoErrorKind, message: string) {
+  readonly kind: GeoErrorKind;
+  constructor(kind: GeoErrorKind, message: string) {
     super(message);
     this.name = 'GeoError';
+    this.kind = kind;
   }
 }
 

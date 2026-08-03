@@ -4,11 +4,12 @@ const STORAGE_KEY = 'salina-go:unlocks';
 
 export class LocalUnlocksRepository implements UnlocksRepository {
   private readonly listeners = new Set<() => void>();
-  // Cached snapshot so useSyncExternalStore sees a stable reference between
-  // writes. Lazily populated on first read; refreshed on every write.
   private cachedList: string[] | null = null;
+  private readonly storage: Storage;
 
-  constructor(private readonly storage: Storage = localStorage) {}
+  constructor(storage: Storage = localStorage) {
+    this.storage = storage;
+  }
 
   isUnlocked(stopId: string): boolean {
     return this.snapshot().includes(stopId);

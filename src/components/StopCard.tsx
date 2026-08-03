@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { Stop } from '../data/schema';
 import type { UnlocksRepository } from '../lib/storage/types';
-import { getCurrentPosition, type GeoError } from '../lib/geolocation';
+import { getCurrentPosition, GeoError } from '../lib/geolocation';
 import { haversineDistanceMeters } from '../lib/geo';
 
 type UnlockState =
