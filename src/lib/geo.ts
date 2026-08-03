@@ -21,3 +21,15 @@ export function haversineDistanceMeters(a: Coord, b: Coord): number {
 
   return 2 * EARTH_RADIUS_M * Math.asin(Math.sqrt(h));
 }
+
+/**
+ * Whether `user` is within `radiusM` meters of `target`, by great-circle
+ * distance. Default radius is 50 m (the MVP game rule).
+ */
+export function isWithinProximity(
+  user: Coord,
+  target: Coord,
+  radiusM = 50,
+): boolean {
+  return haversineDistanceMeters(user, target) <= radiusM;
+}
