@@ -4,32 +4,47 @@ const STORAGE_KEY = 'salina-go:unlocks';
 
 export class LocalUnlocksRepository implements UnlocksRepository {
   private readonly listeners = new Set<() => void>();
+  // Cached snapshot so useSyncExternalStore sees a stable reference between
+  // writes. Lazily populated on first read; refreshed on every write.
+  private cachedList: string[] | null = null;
 
   constructor(private readonly storage: Storage = localStorage) {}
 
   isUnlocked(stopId: string): boolean {
-    return this.read().includes(stopId);
+    return this.snapshot().includes(stopId);
   }
 
   list(): string[] {
-    return this.read();
+    return this.snapshot();
   }
 
   unlock(stopId: string): void {
-    const current = this.read();
+    const current = this.snapshot();
     if (current.includes(stopId)) return;
-    this.write([...current, stopId]);
-    this.emit();
+    const next = [...current, stopId];
+    this.writeAndCache(next);
   }
 
   reset(): void {
-    this.write([]);
-    this.emit();
+    this.writeAndCache([]);
   }
 
   subscribe(listener: () => void): () => void {
     this.listeners.add(listener);
     return () => { this.listeners.delete(listener); };
+  }
+
+  private snapshot(): string[] {
+    if (this.cachedList === null) {
+      this.cachedList = this.read();
+    }
+    return this.cachedList;
+  }
+
+  private writeAndCache(next: string[]): void {
+    this.storage.setItem(STORAGE_KEY, JSON.stringify(next));
+    this.cachedList = next;
+    this.emit();
   }
 
   private emit(): void {
@@ -46,9 +61,5 @@ export class LocalUnlocksRepository implements UnlocksRepository {
     } catch {
       return [];
     }
-  }
-
-  private write(ids: string[]): void {
-    this.storage.setItem(STORAGE_KEY, JSON.stringify(ids));
   }
 }
