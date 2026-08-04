@@ -27,10 +27,20 @@ export default function App() {
   const unlockedIds = useUnlocks(repo);
   const [view, setView] = useState<View>({ kind: 'lines' });
 
+  const unlockedSet = new Set(unlockedIds);
+  const linesCompleted = lines.filter(
+    (l) => l.stopIds.length > 0 && l.stopIds.every((id) => unlockedSet.has(id)),
+  ).length;
+
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <div className="mx-auto max-w-md">
-        <Header unlocked={unlockedIds.length} total={stops.length} />
+        <Header
+          unlocked={unlockedIds.length}
+          total={stops.length}
+          linesCompleted={linesCompleted}
+          totalLines={lines.length}
+        />
         <main className="px-4 py-4 pb-[env(safe-area-inset-bottom)]">
           {view.kind === 'lines' ? (
             <LinesScreen
