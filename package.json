@@ -10,10 +10,11 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "fetch-stops": "tsx scripts/fetch-stops.ts"
+    "fetch-network": "tsx scripts/fetch-network.ts"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
+    "jszip": "^3.10.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "zod": "^4.4.3"

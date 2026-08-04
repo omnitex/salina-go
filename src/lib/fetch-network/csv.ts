@@ -14,7 +14,10 @@
 export function parseCsv(input: string): Record<string, string>[] {
   if (input.length === 0) return [];
 
-  const rows = parseRows(input);
+  // Strip a leading UTF-8 BOM if present — GTFS feeds ship with one.
+  const clean = input.charCodeAt(0) === 0xfeff ? input.slice(1) : input;
+
+  const rows = parseRows(clean);
   if (rows.length === 0) return [];
 
   const header = rows[0];

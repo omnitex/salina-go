@@ -1,5 +1,10 @@
 import type { Line, Stop } from '../../data/schema';
 
+/**
+ * Row shapes from GTFS CSV files. Documented as references for which keys
+ * each transform step reads; in practice parseCsv returns Record<string, string>
+ * and we access fields by string key.
+ */
 export interface GtfsRouteRow {
   route_id: string;
   route_short_name: string;
@@ -29,10 +34,10 @@ export interface GtfsStopRow {
 }
 
 export interface GtfsInput {
-  routes: GtfsRouteRow[];
-  trips: GtfsTripRow[];
-  stopTimes: GtfsStopTimeRow[];
-  stops: GtfsStopRow[];
+  routes: Record<string, string>[];
+  trips: Record<string, string>[];
+  stopTimes: Record<string, string>[];
+  stops: Record<string, string>[];
 }
 
 export interface FetchedNetwork {
@@ -58,7 +63,7 @@ export function parseGtfsNetwork(input: GtfsInput): FetchedNetwork {
   }
 
   // stop_times grouped by trip_id, sorted by stop_sequence, kept as stop_id lists
-  const stopTimesByTrip = new Map<string, GtfsStopTimeRow[]>();
+  const stopTimesByTrip = new Map<string, Record<string, string>[]>();
   for (const st of input.stopTimes) {
     const list = stopTimesByTrip.get(st.trip_id) ?? [];
     list.push(st);
@@ -109,7 +114,7 @@ export function parseGtfsNetwork(input: GtfsInput): FetchedNetwork {
     }
   }
 
-  const stopById = new Map<string, GtfsStopRow>();
+  const stopById = new Map<string, Record<string, string>>();
   for (const s of input.stops) stopById.set(s.stop_id, s);
 
   const stops: Stop[] = [];
