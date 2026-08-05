@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { TitleSection } from '../components/TitleSection';
 import { HomeScreen } from '../components/HomeScreen';
 import { LinesScreen } from '../components/LinesScreen';
 import { LineDetailScreen } from '../components/LineDetailScreen';
@@ -63,6 +64,8 @@ export function AppRoutes() {
     (l) => l.stopIds.length > 0 && l.stopIds.every((id) => unlockedSet.has(id)),
   ).length;
 
+  const isHome = location.pathname === '/';
+
   function celebrate() {
     import('canvas-confetti').then((confetti) => {
       confetti.default({
@@ -76,12 +79,13 @@ export function AppRoutes() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <div className="mx-auto max-w-md">
-        <Header
+        {!isHome && <Header
           unlocked={unlockedIds.length}
           total={stops.length}
           linesCompleted={linesCompleted}
           totalLines={lines.length}
-        />
+        />}
+        {isHome && <TitleSection />}
         <main className="px-4 py-4 pb-[env(safe-area-inset-bottom)]">
           <Routes>
             <Route path="/" element={<HomeScreen />} />

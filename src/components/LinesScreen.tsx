@@ -34,6 +34,12 @@ export function LinesScreen({ lines, unlockedIds }: LinesScreenProps) {
           </p>
         </div>
       )}
+      <Link
+        to="/"
+        className="mb-3 flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+      >
+        <span aria-hidden>←</span> Home
+      </Link>
 
       <ul className="space-y-3">
         {sorted.map((line) => {

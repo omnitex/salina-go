@@ -67,7 +67,7 @@ describe('LinesScreen', () => {
       </HashRouter>,
     );
     const buttons = container.querySelectorAll('a');
-    await user.click(buttons[1]); // Line 2
+    await user.click(buttons[2]); // Line 2 (index 2: 0=Home, 1=Line1, 2=Line2)
     expect(window.location.hash).toBe('#/line/2');
   });
 });

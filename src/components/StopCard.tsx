@@ -73,7 +73,6 @@ export function StopCard({ stop, unlocked, repo, onFirstUnlock }: StopCardProps)
               ✓ Unlocked {relativeTime(state.unlockedAt)}
             </p>
           </div>
-          <div className="text-4xl" aria-hidden>{stop.emoji ?? '📍'}</div>
         </div>
       </div>
     );
@@ -100,9 +99,6 @@ export function StopCard({ stop, unlocked, repo, onFirstUnlock }: StopCardProps)
           {state.kind === 'locked' && (
             <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">🔒 Not yet collected</p>
           )}
-        </div>
-        <div className={['text-4xl', state.kind === 'locked' ? 'opacity-40 grayscale' : ''].join(' ')} aria-hidden>
-          {stop.emoji ?? '📍'}
         </div>
       </div>
       <button
