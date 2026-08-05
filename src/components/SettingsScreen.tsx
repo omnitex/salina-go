@@ -44,7 +44,7 @@ export function SettingsScreen() {
 
           <div className="flex items-center justify-between">
             <div>
-              <p className="font-medium text-gray-900 dark:text-white">Dark mode</p>
+              <p className="font-medium text-gray-900 dark:text-white">Dark mode (experimental)</p>
               <p className="text-sm text-gray-600 dark:text-gray-400">Use dark theme for the interface</p>
             </div>
             <button

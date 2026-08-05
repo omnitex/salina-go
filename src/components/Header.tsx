@@ -25,14 +25,6 @@ export function Header({ unlocked, total, linesCompleted, totalLines }: HeaderPr
             )}
           </p>
         </div>
-        <Link
-          to="/settings"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-          aria-label="Settings"
-          title="Settings"
-        >
-          ⚙️
-        </Link>
       </div>
     </header>
   );
