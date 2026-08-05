@@ -110,7 +110,6 @@ export function AppRoutes() {
           </Routes>
         </main>
         <footer className="px-4 py-4 text-center text-xs text-gray-400">
-          Data: KORDIS JMK · OSM contributors
         </footer>
       </div>
     </div>

@@ -110,8 +110,7 @@ export function LineDetailScreen({
         ))}
       </ul>
 
-      <footer className="mt-8 px-4 py-4 text-center text-xs text-gray-400 dark:text-gray-600">
-        Data: KORDIS JMK · OSM contributors
+      <footer className="px-4 py-4 text-center text-xs text-gray-400 dark:text-gray-600">
       </footer>
     </div>
   );

@@ -14,7 +14,7 @@ export function Header({ unlocked, total, linesCompleted, totalLines }: HeaderPr
       <div className="flex items-start gap-3">
         <div className="flex-1">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-            <span aria-hidden>🚋</span> Šalina Go
+            Šalina GO
           </h1>
           <ProgressBar unlocked={unlocked} total={total} />
           <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">

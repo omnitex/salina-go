@@ -91,7 +91,7 @@ export function SettingsScreen() {
         <div className="rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-sm">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">About</h2>
           <p className="text-sm text-gray-700 dark:text-gray-300">
-            <span className="font-medium">Šalina Go</span> — Brno tram collection game.<br />
+            <span className="font-medium">Šalina GO</span> — Brno tram collection game.<br />
             Built with ❤️ using KORDIS JMK GTFS data.
           </p>
         </div>
