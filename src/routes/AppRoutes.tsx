@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { LinesScreen } from '../components/LinesScreen';
 import { LineDetailScreen } from '../components/LineDetailScreen';
+import { SettingsScreen } from '../components/SettingsScreen';
 import { useAppContext } from '../contexts/AppContext';
 
 export function AppRoutes() {
@@ -105,6 +106,7 @@ export function AppRoutes() {
               }
             />
             <Route path="/cleanup" element={<div>Cleanup complete. Reloading...</div>} />
+            <Route path="/settings" element={<SettingsScreen />} />
           </Routes>
         </main>
         <footer className="px-4 py-4 text-center text-xs text-gray-400">

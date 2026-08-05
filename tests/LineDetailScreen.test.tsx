@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 import { LineDetailScreen } from '../src/components/LineDetailScreen';
@@ -22,7 +22,7 @@ const stops: Stop[] = [
 
 const lines: Line[] = [line];
 
-function renderWithRouter() {
+function renderLineDetailScreen(unlockedIds: string[] = []) {
   return render(
     <HashRouter>
       <AppProvider>
@@ -33,11 +33,12 @@ function renderWithRouter() {
               <LineDetailScreen
                 lines={lines}
                 stops={stops}
-                unlockedIds={[]}
+                unlockedIds={unlockedIds}
                 repo={new LocalUnlocksRepository()}
               />
             }
           />
+          <Route path="/" element={<div>Home</div>} />
         </Routes>
       </AppProvider>
     </HashRouter>,
@@ -47,75 +48,52 @@ function renderWithRouter() {
 describe('LineDetailScreen', () => {
   beforeEach(() => {
     localStorage.clear();
+    window.history.pushState({}, '', '#/line/5');
   });
 
-  it('renders the line header with name and progress fraction', () => {
-    renderWithRouter();
-    window.location.hash = '#/line/5';
-    expect(screen.getByText('Line 5')).toBeInTheDocument();
-    expect(screen.getByText('0 / 3 stops')).toBeInTheDocument();
+  it('renders the line header with name and progress fraction', async () => {
+    renderLineDetailScreen();
+
+    await waitFor(() => {
+      expect(screen.getByText('Line 5')).toBeInTheDocument();
+      expect(screen.getByText('0 / 3 stops')).toBeInTheDocument();
+    });
   });
 
-  it('renders one StopCard per stop in the line', () => {
-    renderWithRouter();
-    window.location.hash = '#/line/5';
-    expect(screen.getByText('Alpha')).toBeInTheDocument();
-    expect(screen.getByText('Bravo')).toBeInTheDocument();
-    expect(screen.getByText('Charlie')).toBeInTheDocument();
+  it('renders one StopCard per stop in the line', async () => {
+    renderLineDetailScreen();
+
+    await waitFor(() => {
+      expect(screen.getByText('Alpha')).toBeInTheDocument();
+      expect(screen.getByText('Bravo')).toBeInTheDocument();
+      expect(screen.getByText('Charlie')).toBeInTheDocument();
+    });
   });
 
-  it('shows the completion mark when all stops are unlocked', () => {
-    render(
-      <HashRouter>
-        <AppProvider>
-          <Routes>
-            <Route
-              path="/line/:lineId"
-              element={
-                <LineDetailScreen
-                  lines={lines}
-                  stops={stops}
-                  unlockedIds={['gtfs:S1', 'gtfs:S2', 'gtfs:S3']}
-                  repo={new LocalUnlocksRepository()}
-                />
-              }
-            />
-          </Routes>
-        </AppProvider>
-      </HashRouter>,
-    );
-    window.location.hash = '#/line/5';
-    expect(screen.getByText('✓ Completed')).toBeInTheDocument();
+  it('shows the completion mark when all stops are unlocked', async () => {
+    renderLineDetailScreen(['gtfs:S1', 'gtfs:S2', 'gtfs:S3']);
+
+    await waitFor(() => {
+      expect(screen.getByText('✓ Completed')).toBeInTheDocument();
+    });
   });
 
-  it('does not show the completion mark when stops are still locked', () => {
-    render(
-      <HashRouter>
-        <AppProvider>
-          <Routes>
-            <Route
-              path="/line/:lineId"
-              element={
-                <LineDetailScreen
-                  lines={lines}
-                  stops={stops}
-                  unlockedIds={['gtfs:S1']}
-                  repo={new LocalUnlocksRepository()}
-                />
-              }
-            />
-          </Routes>
-        </AppProvider>
-      </HashRouter>,
-    );
-    window.location.hash = '#/line/5';
-    expect(screen.queryByText('✓ Completed')).not.toBeInTheDocument();
+  it('does not show the completion mark when stops are still locked', async () => {
+    renderLineDetailScreen(['gtfs:S1']);
+
+    await waitFor(() => {
+      expect(screen.queryByText('✓ Completed')).not.toBeInTheDocument();
+    });
   });
 
   it('navigates back when the back button is clicked', async () => {
     const user = userEvent.setup();
-    renderWithRouter();
-    window.location.hash = '#/line/5';
+    renderLineDetailScreen();
+
+    await waitFor(() => {
+      const backButton = screen.getByRole('link', { name: /all lines/i });
+      expect(backButton).toBeInTheDocument();
+    });
 
     const backButton = screen.getByRole('link', { name: /all lines/i });
     await user.click(backButton);
