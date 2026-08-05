@@ -91,12 +91,12 @@ describe('LineDetailScreen', () => {
     renderLineDetailScreen();
 
     await waitFor(() => {
-      const backButton = screen.getByRole('link', { name: /all lines/i });
+      const backButton = screen.getByRole('link', { name: /lines/i });
       expect(backButton).toBeInTheDocument();
     });
 
-    const backButton = screen.getByRole('link', { name: /all lines/i });
+    const backButton = screen.getByRole('link', { name: /lines/i });
     await user.click(backButton);
-    expect(window.location.hash).toBe('#/');
+    expect(window.location.hash).toBe('#/lines');
   });
 });

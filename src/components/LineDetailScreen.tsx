@@ -55,10 +55,10 @@ export function LineDetailScreen({
   return (
     <div>
       <Link
-        to="/"
+        to="/lines"
         className="mb-3 flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
       >
-        <span aria-hidden>←</span> All lines
+        <span aria-hidden>←</span> Lines
       </Link>
 
       <div
