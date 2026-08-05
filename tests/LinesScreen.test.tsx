@@ -31,8 +31,8 @@ describe('LinesScreen', () => {
         </AppProvider>
       </HashRouter>,
     );
-    expect(screen.getByText('Line 1')).toBeInTheDocument();
-    expect(screen.getByText('Line 2')).toBeInTheDocument();
+    expect(screen.getByText('Alpha – Bravo')).toBeInTheDocument();
+    expect(screen.getByText('Bravo – Delta')).toBeInTheDocument();
   });
 
   it('shows per-line progress based on unlockedIds', () => {

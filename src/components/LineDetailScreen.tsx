@@ -4,6 +4,7 @@ import type { Line, Stop } from '../data/schema';
 import type { UnlocksRepository } from '../lib/storage/types';
 import { StopCard } from './StopCard';
 import { ProgressBar } from './ProgressBar';
+import { getLineDisplayName } from '../lib/utils/lineName';
 
 interface LineDetailScreenProps {
   lines: Line[];
@@ -76,7 +77,7 @@ export function LineDetailScreen({
             {line.id}
           </div>
           <div className="flex-1">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Line {line.name}</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{getLineDisplayName(line, stops)}</h2>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               {unlockedCount} / {line.stopIds.length} stops
               {isComplete && <span className="ml-2 text-amber-600 dark:text-amber-400 font-semibold">✓ Completed</span>}

@@ -55,7 +55,7 @@ describe('LineDetailScreen', () => {
     renderLineDetailScreen();
 
     await waitFor(() => {
-      expect(screen.getByText('Line 5')).toBeInTheDocument();
+      expect(screen.getByText('Alpha – Charlie')).toBeInTheDocument();
       expect(screen.getByText('0 / 3 stops')).toBeInTheDocument();
     });
   });

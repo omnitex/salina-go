@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { Line, Stop } from '../data/schema';
 import { LineCard, sortLines } from './LineCard';
+import { getLineDisplayName } from '../lib/utils/lineName';
 
 interface LinesScreenProps {
   lines: Line[];
@@ -15,7 +16,7 @@ function isLineComplete(line: Line, unlockedSet: Set<string>): boolean {
   );
 }
 
-export function LinesScreen({ lines, unlockedIds }: LinesScreenProps) {
+export function LinesScreen({ lines, stops, unlockedIds }: LinesScreenProps) {
   const unlockedSet = new Set(unlockedIds);
   const sorted = sortLines(lines);
   const completedCount = lines.filter((l) => isLineComplete(l, unlockedSet)).length;
@@ -34,6 +35,7 @@ export function LinesScreen({ lines, unlockedIds }: LinesScreenProps) {
           </p>
         </div>
       )}
+
       <Link
         to="/"
         className="mb-3 flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
@@ -44,11 +46,13 @@ export function LinesScreen({ lines, unlockedIds }: LinesScreenProps) {
       <ul className="space-y-3">
         {sorted.map((line) => {
           const unlockedCount = line.stopIds.filter((id) => unlockedSet.has(id)).length;
+          const displayName = getLineDisplayName(line, stops);
           return (
             <li key={line.id}>
               <Link to={`/line/${line.id}`}>
                 <LineCard
                   line={line}
+                  displayName={displayName}
                   unlockedCount={unlockedCount}
                   onSelect={() => {}}
                 />

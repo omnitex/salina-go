@@ -4,6 +4,7 @@ import { ProgressBar } from './ProgressBar';
 interface LineCardProps {
   line: Line;
   unlockedCount: number;
+  displayName?: string;
   onSelect: () => void;
 }
 
@@ -18,10 +19,11 @@ export function sortLines(lines: Line[]): Line[] {
   return [...lines].sort(naturalLineOrder);
 }
 
-export function LineCard({ line, unlockedCount, onSelect }: LineCardProps) {
+export function LineCard({ line, unlockedCount, displayName, onSelect }: LineCardProps) {
   const total = line.stopIds.length;
   const isComplete = total > 0 && unlockedCount >= total;
   const bgColor = line.routeColor ?? '#9CA3AF';
+  const display = displayName ?? `Line ${line.name}`;
 
   return (
     <button
@@ -43,7 +45,7 @@ export function LineCard({ line, unlockedCount, onSelect }: LineCardProps) {
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-2">
-          <h3 className="font-semibold text-gray-900 dark:text-white truncate">Line {line.name}</h3>
+          <h3 className="font-semibold text-gray-900 dark:text-white truncate">{display}</h3>
           {isComplete && (
             <span className="shrink-0 text-amber-600 dark:text-amber-400 font-semibold" aria-label="Completed">
               ✓
