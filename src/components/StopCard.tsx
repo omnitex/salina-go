@@ -74,7 +74,7 @@ export function StopCard({ stop, unlocked, repo, onFirstUnlock }: StopCardProps)
       <div className="rounded-2xl border-2 border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-950 p-4 shadow-sm">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-lg font-semibold text-green-900 dark:text-green-100">{stop.name}</h2>
+            <h2 className="text-lg font-semibold text-green-900 dark:text-green-100">{stop.name} ({stop.zoneId})</h2>
             <p className="text-sm text-green-700 dark:text-green-300">
               ✓ Unlocked {relativeTime(state.unlockedAt)}
             </p>
@@ -93,7 +93,7 @@ export function StopCard({ stop, unlocked, repo, onFirstUnlock }: StopCardProps)
     ].join(' ')}>
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{stop.name}</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{stop.name} ({stop.zoneId})</h2>
           {state.kind === 'too_far' && (
             <p className="mt-1 text-sm text-amber-700 dark:text-amber-300">
               You're {Math.round(state.distanceM)} m away (±{Math.round(state.accuracyM)} m). Get closer!
