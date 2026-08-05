@@ -54,7 +54,7 @@ function loadSavedConfig(): SavedConfig | null {
   }
 }
 
-function saveConfig(selections: Map<string, RoutePattern>): void {
+function saveConfig(selections: Map<string, RoutePattern>, routePatterns: RoutePatterns[]): void {
   const config: SavedConfig = {
     selections: Array.from(selections.entries()).map(([routeId, pattern]) => ({
       routeId,
@@ -178,7 +178,7 @@ async function main(): Promise<void> {
       console.log('Building network from selections...');
       const { stops, lines } = buildNetworkFromSelections(input, selections);
 
-      saveConfig(selections);
+      saveConfig(selections, routePatterns);
 
       const validatedStops = StopsFileSchema.parse(stops);
       const validatedLines = LinesFileSchema.parse(lines);
