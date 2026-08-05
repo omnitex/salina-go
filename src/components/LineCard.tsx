@@ -23,7 +23,10 @@ export function LineCard({ line, unlockedCount, displayName, onSelect }: LineCar
   const total = line.stopIds.length;
   const isComplete = total > 0 && unlockedCount >= total;
   const bgColor = line.routeColor ?? '#9CA3AF';
-  const display = displayName ?? `Line ${line.name}`;
+
+  const parts = (displayName ?? `Line ${line.name}`).split(' – ');
+  const startStop = parts[0];
+  const endStop = parts.length > 1 ? parts[parts.length - 1] : '';
 
   return (
     <button
@@ -44,8 +47,13 @@ export function LineCard({ line, unlockedCount, displayName, onSelect }: LineCar
         {line.id}
       </div>
       <div className="flex-1 min-w-0">
-        <div className="flex items-center justify-between gap-2">
-          <h3 className="font-semibold text-gray-900 dark:text-white truncate">{display}</h3>
+        <div className="flex items-start gap-2">
+          <div className="flex-1 min-w-0">
+            <div className="flex flex-col gap-0.5">
+              <h3 className="font-semibold text-gray-900 dark:text-white text-lg truncate">{startStop}</h3>
+              {endStop && <h3 className="font-semibold text-gray-900 dark:text-white text-lg truncate">{endStop}</h3>}
+            </div>
+          </div>
           {isComplete && (
             <span className="shrink-0 text-amber-600 dark:text-amber-400 font-semibold" aria-label="Completed">
               ✓
