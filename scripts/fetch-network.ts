@@ -1,4 +1,4 @@
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
@@ -8,6 +8,12 @@ import { downloadAndExtract, buildInput } from '../src/lib/fetch-network/gtfs';
 import { getRoutePatterns, buildNetworkFromSelections, type RoutePattern } from '../src/lib/fetch-network/transform';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const CONFIG_PATH = resolve(__dirname, '.fetch-network-config.json');
+
+interface SavedConfig {
+  selections: { routeId: string; patternIndex: number }[];
+  timestamp: number;
+}
 
 interface LineState {
   patterns: RoutePattern[];
@@ -36,6 +42,27 @@ function formatPattern(p: RoutePattern, index: number, showStops: boolean, stopB
     output += '\n      ' + stopNames.join('\n      ');
   }
   return output;
+}
+
+function loadSavedConfig(): SavedConfig | null {
+  try {
+    if (!existsSync(CONFIG_PATH)) return null;
+    const raw = readFileSync(CONFIG_PATH, 'utf8');
+    return JSON.parse(raw) as SavedConfig;
+  } catch {
+    return null;
+  }
+}
+
+function saveConfig(selections: Map<string, RoutePattern>): void {
+  const config: SavedConfig = {
+    selections: Array.from(selections.entries()).map(([routeId, pattern]) => ({
+      routeId,
+      patternIndex: routePatterns.findIndex((r) => r.routeId === routeId && r.patterns.includes(pattern)),
+    })),
+    timestamp: Date.now(),
+  };
+  writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2) + '\n', 'utf8');
 }
 
 async function main(): Promise<void> {
@@ -90,12 +117,44 @@ async function main(): Promise<void> {
 
   printList();
 
+  const savedConfig = loadSavedConfig();
+  if (savedConfig) {
+    console.log('');
+    console.log('Found saved configuration (from ' + new Date(savedConfig.timestamp).toLocaleString() + ').');
+    console.log('  reconfig - Use saved configuration and export');
+    console.log('  clear    - Clear saved configuration');
+    console.log('');
+  }
+
   while (true) {
     const answer = await question('Command: ');
     const parts = answer.split(/\s+/).filter((p) => p.length > 0);
     if (parts.length === 0) continue;
 
     const cmd = parts[0].toLowerCase();
+
+    if (cmd === 'reconfig' && savedConfig) {
+      for (const saved of savedConfig.selections) {
+        const route = routePatterns.find((r) => r.routeId === saved.routeId);
+        if (route && saved.patternIndex >= 0 && saved.patternIndex < route.patterns.length) {
+          lineStates.get(saved.routeId)!.selectedPattern = saved.patternIndex;
+        }
+      }
+      console.log('Applied saved configuration.');
+    }
+    if (cmd === 'clear') {
+      for (const state of lineStates.values()) {
+        state.selectedPattern = null;
+      }
+      if (existsSync(CONFIG_PATH)) {
+        try {
+          writeFileSync(CONFIG_PATH, '', 'utf8');
+          console.log('Cleared saved configuration.');
+        } catch {}
+      }
+      printList();
+      continue;
+    }
 
     if (cmd === 'list') {
       printList();
@@ -118,6 +177,8 @@ async function main(): Promise<void> {
 
       console.log('Building network from selections...');
       const { stops, lines } = buildNetworkFromSelections(input, selections);
+
+      saveConfig(selections);
 
       const validatedStops = StopsFileSchema.parse(stops);
       const validatedLines = LinesFileSchema.parse(lines);
