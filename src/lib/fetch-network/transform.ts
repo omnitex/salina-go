@@ -73,12 +73,25 @@ export function parseGtfsNetwork(input: GtfsInput): FetchedNetwork {
     list.sort((a, b) => Number(a.stop_sequence) - Number(b.stop_sequence));
   }
 
-  // Build lines: one per tram route, stopIds from the route's first trip,
-  // deduped (preserve first occurrence).
+  // Build lines: one per tram route, stopIds from the route's LONGEST trip
+  // (most stops visited), deduped (preserve first occurrence).
+  //
+  // "Longest" rather than "first" because GTFS trips include short-turn
+  // variants that start/end mid-route (e.g. ARENA BRNO turnarounds). The
+  // first trip in the file is often such a variant. The longest trip is
+  // the most comprehensive published service pattern.
   const lines: Line[] = tramRoutes.map((route) => {
     const tripIds = tripsByRoute.get(route.route_id) ?? [];
-    const firstTrip = tripIds[0];
-    const stopTimes = stopTimesByTrip.get(firstTrip) ?? [];
+    let longestTrip: string | undefined;
+    let longestLen = -1;
+    for (const tripId of tripIds) {
+      const len = (stopTimesByTrip.get(tripId) ?? []).length;
+      if (len > longestLen) {
+        longestLen = len;
+        longestTrip = tripId;
+      }
+    }
+    const stopTimes = stopTimesByTrip.get(longestTrip ?? '') ?? [];
     const seen = new Set<string>();
     const stopIds: string[] = [];
     for (const st of stopTimes) {

@@ -107,3 +107,46 @@ describe('parseGtfsNetwork', () => {
     expect(line5!.stopIds).toHaveLength(3);
   });
 });
+
+// Regression: GTFS feeds include short-turn trips (e.g. ARENA BRNO turnarounds)
+// that start/end mid-route. The transform must pick the longest trip per route,
+// not the first one. T1-short is listed FIRST on purpose.
+describe('parseGtfsNetwork — short-turn variant handling', () => {
+  const shortTurnFixture: GtfsInput = {
+    routes: [
+      { route_id: 'R1', route_short_name: '1', route_type: '0' },
+    ],
+    trips: [
+      // Short variant listed FIRST (the bug-triggering order).
+      { route_id: 'R1', trip_id: 'T1-short', direction_id: '0' },
+      { route_id: 'R1', trip_id: 'T1-full', direction_id: '0' },
+    ],
+    stopTimes: [
+      // Short: A → B → C (3 stops, turnaround mid-route)
+      { trip_id: 'T1-short', stop_id: 'A', stop_sequence: '1' },
+      { trip_id: 'T1-short', stop_id: 'B', stop_sequence: '2' },
+      { trip_id: 'T1-short', stop_id: 'C', stop_sequence: '3' },
+      // Full: A → B → C → D → E (5 stops)
+      { trip_id: 'T1-full', stop_id: 'A', stop_sequence: '1' },
+      { trip_id: 'T1-full', stop_id: 'B', stop_sequence: '2' },
+      { trip_id: 'T1-full', stop_id: 'C', stop_sequence: '3' },
+      { trip_id: 'T1-full', stop_id: 'D', stop_sequence: '4' },
+      { trip_id: 'T1-full', stop_id: 'E', stop_sequence: '5' },
+    ],
+    stops: [
+      { stop_id: 'A', stop_name: 'Alpha', stop_lat: '49.0', stop_lon: '16.0' },
+      { stop_id: 'B', stop_name: 'Bravo', stop_lat: '49.1', stop_lon: '16.1' },
+      { stop_id: 'C', stop_name: 'Charlie', stop_lat: '49.2', stop_lon: '16.2' },
+      { stop_id: 'D', stop_name: 'Delta', stop_lat: '49.3', stop_lon: '16.3' },
+      { stop_id: 'E', stop_name: 'Echo', stop_lat: '49.4', stop_lon: '16.4' },
+    ],
+  };
+
+  it('picks the longest trip even when a short variant is listed first', () => {
+    const { lines } = parseGtfsNetwork(shortTurnFixture);
+    expect(lines[0].stopIds).toHaveLength(5);
+    expect(lines[0].stopIds).toEqual([
+      'gtfs:A', 'gtfs:B', 'gtfs:C', 'gtfs:D', 'gtfs:E',
+    ]);
+  });
+});

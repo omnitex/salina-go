@@ -1,5 +1,159 @@
 [
   {
+    "id": "gtfs:U1619Z2",
+    "name": "Stránská skála - smyčka",
+    "lat": 49.192783,
+    "lon": 16.6773,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1619Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1618Z2",
+    "name": "Stránská skála",
+    "lat": 49.191704,
+    "lon": 16.673622,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1618Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1501Z2",
+    "name": "Podstránská",
+    "lat": 49.18765,
+    "lon": 16.665957,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1501Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1291Z2",
+    "name": "Krásného",
+    "lat": 49.19067,
+    "lon": 16.649391,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1291Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1810Z2",
+    "name": "Židovský hřbitov",
+    "lat": 49.191517,
+    "lon": 16.641078,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1810Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1116Z2",
+    "name": "Geislerova",
+    "lat": 49.192754,
+    "lon": 16.634757,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1116Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1814Z2",
+    "name": "Životského",
+    "lat": 49.190687,
+    "lon": 16.633889,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1814Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1372Z2",
+    "name": "Masná",
+    "lat": 49.191283,
+    "lon": 16.6245,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1372Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1746Z2",
+    "name": "Vlhká",
+    "lat": 49.191852,
+    "lon": 16.619157,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1746Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1146Z6",
+    "name": "Hlavní nádraží",
+    "lat": 49.192214,
+    "lon": 16.613823,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1146Z6"
+    }
+  },
+  {
+    "id": "gtfs:U1357Z3",
+    "name": "Malinovského náměstí",
+    "lat": 49.196131,
+    "lon": 16.612953,
+    "emoji": "🚋",
+    "lines": [
+      "10"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1357Z3"
+    }
+  },
+  {
     "id": "gtfs:U1073Z1",
     "name": "Česká",
     "lat": 49.197618,
@@ -7,7 +161,8 @@
     "emoji": "🚋",
     "lines": [
       "10",
-      "5"
+      "5",
+      "8"
     ],
     "source": {
       "kind": "gtfs",
@@ -51,7 +206,8 @@
     "lon": 16.592283,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -65,7 +221,8 @@
     "lon": 16.584499,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -79,7 +236,8 @@
     "lon": 16.579837,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -93,7 +251,8 @@
     "lon": 16.576065,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -107,7 +266,8 @@
     "lon": 16.569741,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -121,7 +281,8 @@
     "lon": 16.570536,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -135,7 +296,8 @@
     "lon": 16.568673,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -149,7 +311,8 @@
     "lon": 16.563449,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -163,7 +326,8 @@
     "lon": 16.553656,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -177,7 +341,8 @@
     "lon": 16.54726,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -191,7 +356,8 @@
     "lon": 16.542392,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -205,7 +371,8 @@
     "lon": 16.536794,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -219,7 +386,8 @@
     "lon": 16.532002,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -233,7 +401,8 @@
     "lon": 16.521658,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -247,7 +416,8 @@
     "lon": 16.518739,
     "emoji": "🚋",
     "lines": [
-      "10"
+      "10",
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -255,203 +425,274 @@
     }
   },
   {
-    "id": "gtfs:U1343Z2",
-    "name": "ARENA BRNO",
-    "lat": 49.191387,
-    "lon": 16.576425,
-    "emoji": "🚋",
-    "lines": [
-      "12",
-      "1",
-      "6",
-      "7"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1343Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1769Z2",
-    "name": "Výstaviště - vstup G2",
-    "lat": 49.190207,
-    "lon": 16.580555,
-    "emoji": "🚋",
-    "lines": [
-      "12",
-      "1",
-      "6",
-      "7"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1769Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1768Z2",
-    "name": "Výstaviště - hlavní vstup",
-    "lat": 49.189325,
-    "lon": 16.585699,
-    "emoji": "🚋",
-    "lines": [
-      "12",
-      "1",
-      "6",
-      "7"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1768Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1378Z2",
-    "name": "Mendlovo náměstí",
-    "lat": 49.190034,
-    "lon": 16.593837,
-    "emoji": "🚋",
-    "lines": [
-      "12",
-      "1",
-      "6",
-      "7"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1378Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1721Z2",
-    "name": "Václavská",
-    "lat": 49.188715,
-    "lon": 16.596878,
-    "emoji": "🚋",
-    "lines": [
-      "12",
-      "1",
-      "2"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1721Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1176Z2",
-    "name": "Hybešova",
-    "lat": 49.189209,
-    "lon": 16.603364,
-    "emoji": "🚋",
-    "lines": [
-      "12",
-      "1",
-      "2"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1176Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1436Z2",
-    "name": "Nové sady",
-    "lat": 49.190222,
-    "lon": 16.609403,
-    "emoji": "🚋",
-    "lines": [
-      "12",
-      "1",
-      "2"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1436Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1146Z4",
-    "name": "Hlavní nádraží",
-    "lat": 49.19125,
-    "lon": 16.612674,
-    "emoji": "🚋",
-    "lines": [
-      "12"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1146Z4"
-    }
-  },
-  {
-    "id": "gtfs:U1716Z1",
-    "name": "Úzká",
-    "lat": 49.189807,
-    "lon": 16.614666,
-    "emoji": "🚋",
-    "lines": [
-      "12"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1716Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1011Z1",
-    "name": "Autobusové nádraží",
-    "lat": 49.185873,
-    "lon": 16.61787,
-    "emoji": "🚋",
-    "lines": [
-      "12"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1011Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1807Z1",
-    "name": "Železniční",
-    "lat": 49.18274,
-    "lon": 16.619609,
-    "emoji": "🚋",
-    "lines": [
-      "12"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1807Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1266Z1",
-    "name": "Konopná",
-    "lat": 49.18026,
-    "lon": 16.621122,
-    "emoji": "🚋",
-    "lines": [
-      "12"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1266Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1256Z1",
+    "id": "gtfs:U1256Z2",
     "name": "Komárov",
-    "lat": 49.175889,
-    "lon": 16.621291,
+    "lat": 49.176162,
+    "lon": 16.621658,
     "emoji": "🚋",
     "lines": [
       "12"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1256Z1"
+      "gtfsStopId": "U1256Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1266Z2",
+    "name": "Konopná",
+    "lat": 49.180196,
+    "lon": 16.621238,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1266Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1807Z2",
+    "name": "Železniční",
+    "lat": 49.183322,
+    "lon": 16.619338,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1807Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1011Z2",
+    "name": "Autobusové nádraží",
+    "lat": 49.186417,
+    "lon": 16.617622,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1011Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1716Z2",
+    "name": "Úzká",
+    "lat": 49.190179,
+    "lon": 16.614625,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1716Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1146Z3",
+    "name": "Hlavní nádraží",
+    "lat": 49.191063,
+    "lon": 16.611972,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1146Z3"
+    }
+  },
+  {
+    "id": "gtfs:U1436Z1",
+    "name": "Nové sady",
+    "lat": 49.190116,
+    "lon": 16.609025,
+    "emoji": "🚋",
+    "lines": [
+      "12",
+      "H4",
+      "1"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1436Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1637Z2",
+    "name": "Šilingrovo náměstí",
+    "lat": 49.192027,
+    "lon": 16.605234,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1637Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1073Z4",
+    "name": "Česká",
+    "lat": 49.198134,
+    "lon": 16.605041,
+    "emoji": "🚋",
+    "lines": [
+      "12",
+      "3"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1073Z4"
+    }
+  },
+  {
+    "id": "gtfs:U1121Z1",
+    "name": "Grohova",
+    "lat": 49.201153,
+    "lon": 16.599729,
+    "emoji": "🚋",
+    "lines": [
+      "12",
+      "3"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1121Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1262Z1",
+    "name": "Konečného náměstí",
+    "lat": 49.204484,
+    "lon": 16.595426,
+    "emoji": "🚋",
+    "lines": [
+      "12",
+      "3"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1262Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1431Z1",
+    "name": "Nerudova",
+    "lat": 49.206566,
+    "lon": 16.595654,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1431Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1242Z1",
+    "name": "Klusáčkova",
+    "lat": 49.212365,
+    "lon": 16.592666,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1242Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1661Z1",
+    "name": "Tererova",
+    "lat": 49.21589,
+    "lon": 16.589173,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1661Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1088Z1",
+    "name": "Dobrovského",
+    "lat": 49.217769,
+    "lon": 16.587876,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1088Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1567Z1",
+    "name": "Skácelova",
+    "lat": 49.221886,
+    "lon": 16.585096,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1567Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1072Z1",
+    "name": "Červinkova",
+    "lat": 49.22545,
+    "lon": 16.582624,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1072Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1664Z1",
+    "name": "Technické muzeum",
+    "lat": 49.228047,
+    "lon": 16.582285,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1664Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1659Z1",
+    "name": "Technologický park",
+    "lat": 49.231361,
+    "lon": 16.577036,
+    "emoji": "🚋",
+    "lines": [
+      "12"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1659Z1"
     }
   },
   {
@@ -476,7 +717,8 @@
     "emoji": "🚋",
     "lines": [
       "H4",
-      "3"
+      "4",
+      "6"
     ],
     "source": {
       "kind": "gtfs",
@@ -491,6 +733,7 @@
     "emoji": "🚋",
     "lines": [
       "H4",
+      "4",
       "9"
     ],
     "source": {
@@ -506,6 +749,7 @@
     "emoji": "🚋",
     "lines": [
       "H4",
+      "4",
       "9"
     ],
     "source": {
@@ -528,21 +772,6 @@
     }
   },
   {
-    "id": "gtfs:U1436Z1",
-    "name": "Nové sady",
-    "lat": 49.190116,
-    "lon": 16.609025,
-    "emoji": "🚋",
-    "lines": [
-      "H4",
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1436Z1"
-    }
-  },
-  {
     "id": "gtfs:U1176Z1",
     "name": "Hybešova",
     "lat": 49.189322,
@@ -550,7 +779,7 @@
     "emoji": "🚋",
     "lines": [
       "H4",
-      "8"
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -565,7 +794,7 @@
     "emoji": "🚋",
     "lines": [
       "H4",
-      "8"
+      "1"
     ],
     "source": {
       "kind": "gtfs",
@@ -587,229 +816,247 @@
     }
   },
   {
-    "id": "gtfs:U1146Z2",
-    "name": "Hlavní nádraží",
-    "lat": 49.191394,
-    "lon": 16.612548,
+    "id": "gtfs:U1553Z2",
+    "name": "Řečkovice",
+    "lat": 49.246978,
+    "lon": 16.5794,
+    "emoji": "🚋",
+    "lines": [
+      "1"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1553Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1108Z2",
+    "name": "Filkukova",
+    "lat": 49.243517,
+    "lon": 16.581881,
+    "emoji": "🚋",
+    "lines": [
+      "1"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1108Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1272Z2",
+    "name": "Kořískova",
+    "lat": 49.238898,
+    "lon": 16.584964,
+    "emoji": "🚋",
+    "lines": [
+      "1"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1272Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1167Z2",
+    "name": "Hudcova",
+    "lat": 49.235791,
+    "lon": 16.587041,
+    "emoji": "🚋",
+    "lines": [
+      "1"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1167Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1683Z2",
+    "name": "Tylova",
+    "lat": 49.232055,
+    "lon": 16.589539,
     "emoji": "🚋",
     "lines": [
       "1",
-      "2",
-      "9"
+      "3",
+      "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1146Z2"
+      "gtfsStopId": "U1683Z2"
     }
   },
   {
-    "id": "gtfs:U1357Z3",
-    "name": "Malinovského náměstí",
-    "lat": 49.196131,
-    "lon": 16.612953,
-    "emoji": "🚋",
-    "lines": [
-      "1"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1357Z3"
-    }
-  },
-  {
-    "id": "gtfs:U1397Z1",
-    "name": "Moravské náměstí",
-    "lat": 49.19996,
-    "lon": 16.607931,
-    "emoji": "🚋",
-    "lines": [
-      "1"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1397Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1006Z1",
-    "name": "Antonínská",
-    "lat": 49.203685,
-    "lon": 16.606678,
-    "emoji": "🚋",
-    "lines": [
-      "1"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1006Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1483Z1",
-    "name": "Pionýrská",
-    "lat": 49.207491,
-    "lon": 16.604472,
-    "emoji": "🚋",
-    "lines": [
-      "1"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1483Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1166Z1",
-    "name": "Hrnčířská",
-    "lat": 49.210254,
-    "lon": 16.602868,
-    "emoji": "🚋",
-    "lines": [
-      "1"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1166Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1652Z1",
-    "name": "Šumavská",
-    "lat": 49.213991,
-    "lon": 16.600669,
-    "emoji": "🚋",
-    "lines": [
-      "1"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1652Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1233Z1",
-    "name": "Kartouzská",
-    "lat": 49.216998,
-    "lon": 16.598896,
-    "emoji": "🚋",
-    "lines": [
-      "1"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1233Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1218Z1",
-    "name": "Jungmannova",
-    "lat": 49.220856,
-    "lon": 16.596583,
-    "emoji": "🚋",
-    "lines": [
-      "1"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1218Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1171Z1",
-    "name": "Husitská",
-    "lat": 49.223125,
-    "lon": 16.59524,
-    "emoji": "🚋",
-    "lines": [
-      "1"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1171Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1566Z1",
+    "id": "gtfs:U1566Z2",
     "name": "Semilasso",
-    "lat": 49.227417,
-    "lon": 16.592683,
+    "lat": 49.228227,
+    "lon": 16.592081,
     "emoji": "🚋",
     "lines": [
-      "1"
+      "1",
+      "3",
+      "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1566Z1"
+      "gtfsStopId": "U1566Z2"
     }
   },
   {
-    "id": "gtfs:U1683Z1",
-    "name": "Tylova",
-    "lat": 49.23243,
-    "lon": 16.589321,
+    "id": "gtfs:U1171Z2",
+    "name": "Husitská",
+    "lat": 49.223415,
+    "lon": 16.595016,
     "emoji": "🚋",
     "lines": [
-      "1"
+      "1",
+      "3",
+      "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1683Z1"
+      "gtfsStopId": "U1171Z2"
     }
   },
   {
-    "id": "gtfs:U1167Z1",
-    "name": "Hudcova",
-    "lat": 49.235202,
-    "lon": 16.587471,
+    "id": "gtfs:U1218Z2",
+    "name": "Jungmannova",
+    "lat": 49.221083,
+    "lon": 16.596416,
     "emoji": "🚋",
     "lines": [
-      "1"
+      "1",
+      "3",
+      "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1167Z1"
+      "gtfsStopId": "U1218Z2"
     }
   },
   {
-    "id": "gtfs:U1272Z1",
-    "name": "Kořískova",
-    "lat": 49.240579,
-    "lon": 16.58388,
+    "id": "gtfs:U1233Z2",
+    "name": "Kartouzská",
+    "lat": 49.21665,
+    "lon": 16.599078,
     "emoji": "🚋",
     "lines": [
-      "1"
+      "1",
+      "3",
+      "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1272Z1"
+      "gtfsStopId": "U1233Z2"
     }
   },
   {
-    "id": "gtfs:U1108Z1",
-    "name": "Filkukova",
-    "lat": 49.244244,
-    "lon": 16.58143,
+    "id": "gtfs:U1652Z2",
+    "name": "Šumavská",
+    "lat": 49.214022,
+    "lon": 16.60062,
     "emoji": "🚋",
     "lines": [
-      "1"
+      "1",
+      "3",
+      "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1108Z1"
+      "gtfsStopId": "U1652Z2"
     }
   },
   {
-    "id": "gtfs:U1553Z1",
-    "name": "Řečkovice",
-    "lat": 49.247295,
-    "lon": 16.578803,
+    "id": "gtfs:U1166Z2",
+    "name": "Hrnčířská",
+    "lat": 49.21062,
+    "lon": 16.602628,
+    "emoji": "🚋",
+    "lines": [
+      "1",
+      "3",
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1166Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1483Z2",
+    "name": "Pionýrská",
+    "lat": 49.207904,
+    "lon": 16.604201,
+    "emoji": "🚋",
+    "lines": [
+      "1",
+      "3",
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1483Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1006Z2",
+    "name": "Antonínská",
+    "lat": 49.203166,
+    "lon": 16.606915,
+    "emoji": "🚋",
+    "lines": [
+      "1",
+      "3",
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1006Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1397Z2",
+    "name": "Moravské náměstí",
+    "lat": 49.199237,
+    "lon": 16.608067,
+    "emoji": "🚋",
+    "lines": [
+      "1",
+      "3",
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1397Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1357Z4",
+    "name": "Malinovského náměstí",
+    "lat": 49.195612,
+    "lon": 16.613248,
     "emoji": "🚋",
     "lines": [
       "1"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1553Z1"
+      "gtfsStopId": "U1357Z4"
+    }
+  },
+  {
+    "id": "gtfs:U1146Z1",
+    "name": "Hlavní nádraží",
+    "lat": 49.191185,
+    "lon": 16.611879,
+    "emoji": "🚋",
+    "lines": [
+      "1"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1146Z1"
     }
   },
   {
@@ -945,7 +1192,9 @@
     "lon": 16.595242,
     "emoji": "🚋",
     "lines": [
-      "2"
+      "2",
+      "6",
+      "7"
     ],
     "source": {
       "kind": "gtfs",
@@ -959,7 +1208,9 @@
     "lon": 16.595061,
     "emoji": "🚋",
     "lines": [
-      "2"
+      "2",
+      "6",
+      "7"
     ],
     "source": {
       "kind": "gtfs",
@@ -973,11 +1224,76 @@
     "lon": 16.594512,
     "emoji": "🚋",
     "lines": [
-      "2"
+      "2",
+      "6",
+      "7"
     ],
     "source": {
       "kind": "gtfs",
       "gtfsStopId": "U1512Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1721Z2",
+    "name": "Václavská",
+    "lat": 49.188715,
+    "lon": 16.596878,
+    "emoji": "🚋",
+    "lines": [
+      "2",
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1721Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1176Z2",
+    "name": "Hybešova",
+    "lat": 49.189209,
+    "lon": 16.603364,
+    "emoji": "🚋",
+    "lines": [
+      "2",
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1176Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1436Z2",
+    "name": "Nové sady",
+    "lat": 49.190222,
+    "lon": 16.609403,
+    "emoji": "🚋",
+    "lines": [
+      "2",
+      "7",
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1436Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1146Z2",
+    "name": "Hlavní nádraží",
+    "lat": 49.191394,
+    "lon": 16.612548,
+    "emoji": "🚋",
+    "lines": [
+      "2",
+      "4",
+      "7",
+      "9"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1146Z2"
     }
   },
   {
@@ -987,7 +1303,9 @@
     "lon": 16.614825,
     "emoji": "🚋",
     "lines": [
-      "2"
+      "2",
+      "4",
+      "7"
     ],
     "source": {
       "kind": "gtfs",
@@ -1001,7 +1319,9 @@
     "lon": 16.619945,
     "emoji": "🚋",
     "lines": [
-      "2"
+      "2",
+      "4",
+      "7"
     ],
     "source": {
       "kind": "gtfs",
@@ -1015,7 +1335,9 @@
     "lon": 16.626109,
     "emoji": "🚋",
     "lines": [
-      "2"
+      "2",
+      "4",
+      "7"
     ],
     "source": {
       "kind": "gtfs",
@@ -1029,8 +1351,7 @@
     "lon": 16.629717,
     "emoji": "🚋",
     "lines": [
-      "2",
-      "3"
+      "2"
     ],
     "source": {
       "kind": "gtfs",
@@ -1044,8 +1365,7 @@
     "lon": 16.634306,
     "emoji": "🚋",
     "lines": [
-      "2",
-      "3"
+      "2"
     ],
     "source": {
       "kind": "gtfs",
@@ -1059,8 +1379,7 @@
     "lon": 16.641948,
     "emoji": "🚋",
     "lines": [
-      "2",
-      "3"
+      "2"
     ],
     "source": {
       "kind": "gtfs",
@@ -1068,87 +1387,228 @@
     }
   },
   {
-    "id": "gtfs:U1591Z2",
-    "name": "Sochorova",
-    "lat": 49.21349,
-    "lon": 16.564933,
+    "id": "gtfs:U1756Z2",
+    "name": "Vozovna Medlánky",
+    "lat": 49.235314,
+    "lon": 16.586529,
     "emoji": "🚋",
     "lines": [
-      "3"
+      "3",
+      "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1591Z2"
+      "gtfsStopId": "U1756Z2"
     }
   },
   {
-    "id": "gtfs:U1544Z2",
-    "name": "Rosického náměstí",
-    "lat": 49.214708,
-    "lon": 16.568749,
-    "emoji": "🚋",
-    "lines": [
-      "3"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1544Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1400Z2",
-    "name": "Mozolky",
-    "lat": 49.21352,
-    "lon": 16.575061,
-    "emoji": "🚋",
-    "lines": [
-      "3"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1400Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1047Z2",
-    "name": "Burianovo náměstí",
-    "lat": 49.212274,
-    "lon": 16.578835,
-    "emoji": "🚋",
-    "lines": [
-      "3"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1047Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1657Z2",
-    "name": "Tábor",
-    "lat": 49.210553,
-    "lon": 16.585882,
-    "emoji": "🚋",
-    "lines": [
-      "3"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1657Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1552Z2",
+    "id": "gtfs:U1552Z1",
     "name": "Rybkova",
-    "lat": 49.206244,
-    "lon": 16.593167,
+    "lat": 49.205908,
+    "lon": 16.593602,
     "emoji": "🚋",
     "lines": [
       "3"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1552Z2"
+      "gtfsStopId": "U1552Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1657Z1",
+    "name": "Tábor",
+    "lat": 49.210271,
+    "lon": 16.587228,
+    "emoji": "🚋",
+    "lines": [
+      "3"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1657Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1282Z1",
+    "name": "Králova",
+    "lat": 49.211297,
+    "lon": 16.583386,
+    "emoji": "🚋",
+    "lines": [
+      "3"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1282Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1047Z1",
+    "name": "Burianovo náměstí",
+    "lat": 49.212482,
+    "lon": 16.578371,
+    "emoji": "🚋",
+    "lines": [
+      "3"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1047Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1400Z1",
+    "name": "Mozolky",
+    "lat": 49.213712,
+    "lon": 16.574628,
+    "emoji": "🚋",
+    "lines": [
+      "3"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1400Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1544Z1",
+    "name": "Rosického náměstí",
+    "lat": 49.214438,
+    "lon": 16.567996,
+    "emoji": "🚋",
+    "lines": [
+      "3"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1544Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1591Z1",
+    "name": "Sochorova",
+    "lat": 49.213406,
+    "lon": 16.564341,
+    "emoji": "🚋",
+    "lines": [
+      "3"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1591Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1659Z2",
+    "name": "Technologický park",
+    "lat": 49.231453,
+    "lon": 16.576939,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1659Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1664Z2",
+    "name": "Technické muzeum",
+    "lat": 49.228605,
+    "lon": 16.582096,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1664Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1072Z2",
+    "name": "Červinkova",
+    "lat": 49.223442,
+    "lon": 16.583855,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1072Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1567Z2",
+    "name": "Skácelova",
+    "lat": 49.221651,
+    "lon": 16.585163,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1567Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1088Z2",
+    "name": "Dobrovského",
+    "lat": 49.218351,
+    "lon": 16.587423,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1088Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1661Z2",
+    "name": "Tererova",
+    "lat": 49.215675,
+    "lon": 16.589238,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1661Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1242Z2",
+    "name": "Klusáčkova",
+    "lat": 49.211903,
+    "lon": 16.592875,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1242Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1431Z2",
+    "name": "Nerudova",
+    "lat": 49.205983,
+    "lon": 16.595174,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1431Z2"
     }
   },
   {
@@ -1158,7 +1618,7 @@
     "lon": 16.596051,
     "emoji": "🚋",
     "lines": [
-      "3"
+      "4"
     ],
     "source": {
       "kind": "gtfs",
@@ -1172,7 +1632,7 @@
     "lon": 16.59934,
     "emoji": "🚋",
     "lines": [
-      "3"
+      "4"
     ],
     "source": {
       "kind": "gtfs",
@@ -1180,129 +1640,157 @@
     }
   },
   {
-    "id": "gtfs:U1397Z3",
-    "name": "Moravské náměstí",
-    "lat": 49.199309,
-    "lon": 16.609047,
-    "emoji": "🚋",
-    "lines": [
-      "3"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1397Z3"
-    }
-  },
-  {
-    "id": "gtfs:U1418Z1",
-    "name": "Náměstí 28. října",
-    "lat": 49.200961,
-    "lon": 16.613794,
-    "emoji": "🚋",
-    "lines": [
-      "3"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1418Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1086Z1",
-    "name": "Dětská nemocnice",
-    "lat": 49.202836,
-    "lon": 16.618608,
-    "emoji": "🚋",
-    "lines": [
-      "3"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1086Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1211Z7",
-    "name": "Jugoslávská",
-    "lat": 49.203843,
-    "lon": 16.624408,
-    "emoji": "🚋",
-    "lines": [
-      "3"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1211Z7"
-    }
-  },
-  {
-    "id": "gtfs:U1257Z1",
-    "name": "Komenského náměstí",
-    "lat": 49.197047,
-    "lon": 16.601844,
+    "id": "gtfs:U1676Z1",
+    "name": "Trávníčkova",
+    "lat": 49.204439,
+    "lon": 16.625679,
     "emoji": "🚋",
     "lines": [
       "4"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1257Z1"
+      "gtfsStopId": "U1676Z1"
     }
   },
   {
-    "id": "gtfs:U1442Z1",
-    "name": "Obilní trh",
-    "lat": 49.198221,
-    "lon": 16.597478,
+    "id": "gtfs:U1398Z1",
+    "name": "Mostecká",
+    "lat": 49.20703,
+    "lon": 16.627792,
     "emoji": "🚋",
     "lines": [
       "4"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1442Z1"
+      "gtfsStopId": "U1398Z1"
     }
   },
   {
-    "id": "gtfs:U1712Z1",
-    "name": "Úvoz",
-    "lat": 49.19829,
-    "lon": 16.59265,
+    "id": "gtfs:U1434Z1",
+    "name": "Vozovna Husovice",
+    "lat": 49.208331,
+    "lon": 16.629789,
     "emoji": "🚋",
     "lines": [
       "4"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1712Z1"
+      "gtfsStopId": "U1434Z1"
     }
   },
   {
-    "id": "gtfs:U1762Z1",
-    "name": "Všetičkova",
-    "lat": 49.198749,
-    "lon": 16.588757,
+    "id": "gtfs:U1422Z1",
+    "name": "Náměstí Republiky",
+    "lat": 49.210591,
+    "lon": 16.633523,
     "emoji": "🚋",
     "lines": [
       "4"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1762Z1"
+      "gtfsStopId": "U1422Z1"
     }
   },
   {
-    "id": "gtfs:U1371Z1",
-    "name": "Náměstí Míru",
-    "lat": 49.202197,
-    "lon": 16.582014,
+    "id": "gtfs:U1668Z1",
+    "name": "Tomkovo náměstí",
+    "lat": 49.214035,
+    "lon": 16.636587,
     "emoji": "🚋",
     "lines": [
       "4"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1371Z1"
+      "gtfsStopId": "U1668Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1358Z2",
+    "name": "Maloměřický most",
+    "lat": 49.215518,
+    "lon": 16.642987,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1358Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1521Z1",
+    "name": "Proškovo náměstí",
+    "lat": 49.220207,
+    "lon": 16.643397,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1521Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1447Z1",
+    "name": "Obřanská - u školy",
+    "lat": 49.222872,
+    "lon": 16.644811,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1447Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1077Z1",
+    "name": "Čtvery hony",
+    "lat": 49.226227,
+    "lon": 16.645584,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1077Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1448Z1",
+    "name": "Obřanský most",
+    "lat": 49.227602,
+    "lon": 16.650226,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1448Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1014Z1",
+    "name": "Babická",
+    "lat": 49.228004,
+    "lon": 16.652555,
+    "emoji": "🚋",
+    "lines": [
+      "4"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1014Z1"
     }
   },
   {
@@ -1427,10 +1915,7 @@
     "lon": 16.594633,
     "emoji": "🚋",
     "lines": [
-      "5",
-      "6",
-      "7",
-      "8"
+      "5"
     ],
     "source": {
       "kind": "gtfs",
@@ -1444,10 +1929,7 @@
     "lon": 16.594981,
     "emoji": "🚋",
     "lines": [
-      "5",
-      "6",
-      "7",
-      "8"
+      "5"
     ],
     "source": {
       "kind": "gtfs",
@@ -1461,10 +1943,7 @@
     "lon": 16.595328,
     "emoji": "🚋",
     "lines": [
-      "5",
-      "6",
-      "7",
-      "8"
+      "5"
     ],
     "source": {
       "kind": "gtfs",
@@ -1514,104 +1993,10 @@
     }
   },
   {
-    "id": "gtfs:U1293Z1",
-    "name": "Krematorium",
-    "lat": 49.172308,
-    "lon": 16.586427,
-    "emoji": "🚋",
-    "lines": [
-      "6",
-      "7",
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1293Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1021Z1",
-    "name": "Běloruská",
-    "lat": 49.170755,
-    "lon": 16.580895,
-    "emoji": "🚋",
-    "lines": [
-      "6",
-      "7",
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1021Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1653Z3",
-    "name": "Švermova",
-    "lat": 49.169262,
-    "lon": 16.573246,
-    "emoji": "🚋",
-    "lines": [
-      "6",
-      "7",
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1653Z3"
-    }
-  },
-  {
-    "id": "gtfs:U1472Z1",
-    "name": "Osová",
-    "lat": 49.169023,
-    "lon": 16.56653,
-    "emoji": "🚋",
-    "lines": [
-      "6",
-      "7",
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1472Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1227Z1",
-    "name": "Karpatská",
-    "lat": 49.168113,
-    "lon": 16.562077,
-    "emoji": "🚋",
-    "lines": [
-      "6",
-      "7"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1227Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1097Z1",
-    "name": "Dunajská",
-    "lat": 49.169066,
-    "lon": 16.55664,
-    "emoji": "🚋",
-    "lines": [
-      "6",
-      "7"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1097Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1616Z1",
+    "id": "gtfs:U1616Z2",
     "name": "Starý Lískovec, smyčka",
-    "lat": 49.171366,
-    "lon": 16.554527,
+    "lat": 49.170465,
+    "lon": 16.554565,
     "emoji": "🚋",
     "lines": [
       "6",
@@ -1619,7 +2004,419 @@
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1616Z1"
+      "gtfsStopId": "U1616Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1097Z2",
+    "name": "Dunajská",
+    "lat": 49.169112,
+    "lon": 16.556485,
+    "emoji": "🚋",
+    "lines": [
+      "6",
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1097Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1227Z2",
+    "name": "Karpatská",
+    "lat": 49.168021,
+    "lon": 16.561879,
+    "emoji": "🚋",
+    "lines": [
+      "6",
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1227Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1472Z2",
+    "name": "Osová",
+    "lat": 49.169005,
+    "lon": 16.567514,
+    "emoji": "🚋",
+    "lines": [
+      "6",
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1472Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1653Z4",
+    "name": "Švermova",
+    "lat": 49.169191,
+    "lon": 16.573122,
+    "emoji": "🚋",
+    "lines": [
+      "6",
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1653Z4"
+    }
+  },
+  {
+    "id": "gtfs:U1021Z2",
+    "name": "Běloruská",
+    "lat": 49.170662,
+    "lon": 16.580727,
+    "emoji": "🚋",
+    "lines": [
+      "6",
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1021Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1293Z2",
+    "name": "Krematorium",
+    "lat": 49.172257,
+    "lon": 16.586414,
+    "emoji": "🚋",
+    "lines": [
+      "6",
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1293Z2"
+    }
+  },
+  {
+    "id": "gtfs:U1378Z3",
+    "name": "Mendlovo náměstí",
+    "lat": 49.190293,
+    "lon": 16.594781,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1378Z3"
+    }
+  },
+  {
+    "id": "gtfs:U1428Z1",
+    "name": "Nemocnice u sv. Anny",
+    "lat": 49.191471,
+    "lon": 16.599302,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1428Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1637Z4",
+    "name": "Šilingrovo náměstí",
+    "lat": 49.192271,
+    "lon": 16.604367,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1637Z4"
+    }
+  },
+  {
+    "id": "gtfs:U1397Z1",
+    "name": "Moravské náměstí",
+    "lat": 49.19996,
+    "lon": 16.607931,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1397Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1006Z1",
+    "name": "Antonínská",
+    "lat": 49.203685,
+    "lon": 16.606678,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1006Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1483Z1",
+    "name": "Pionýrská",
+    "lat": 49.207491,
+    "lon": 16.604472,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1483Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1166Z1",
+    "name": "Hrnčířská",
+    "lat": 49.210254,
+    "lon": 16.602868,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1166Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1652Z1",
+    "name": "Šumavská",
+    "lat": 49.213991,
+    "lon": 16.600669,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1652Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1233Z1",
+    "name": "Kartouzská",
+    "lat": 49.216998,
+    "lon": 16.598896,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1233Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1218Z1",
+    "name": "Jungmannova",
+    "lat": 49.220856,
+    "lon": 16.596583,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1218Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1171Z1",
+    "name": "Husitská",
+    "lat": 49.223125,
+    "lon": 16.59524,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1171Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1566Z1",
+    "name": "Semilasso",
+    "lat": 49.227417,
+    "lon": 16.592683,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1566Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1683Z1",
+    "name": "Tylova",
+    "lat": 49.23243,
+    "lon": 16.589321,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1683Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1756Z1",
+    "name": "Vozovna Medlánky",
+    "lat": 49.235402,
+    "lon": 16.586291,
+    "emoji": "🚋",
+    "lines": [
+      "6"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1756Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1211Z8",
+    "name": "Jugoslávská",
+    "lat": 49.204197,
+    "lon": 16.624075,
+    "emoji": "🚋",
+    "lines": [
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1211Z8"
+    }
+  },
+  {
+    "id": "gtfs:U1211Z1",
+    "name": "Jugoslávská",
+    "lat": 49.205423,
+    "lon": 16.622876,
+    "emoji": "🚋",
+    "lines": [
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1211Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1667Z1",
+    "name": "Tomanova",
+    "lat": 49.208192,
+    "lon": 16.62013,
+    "emoji": "🚋",
+    "lines": [
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1667Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1786Z1",
+    "name": "Zemědělská",
+    "lat": 49.210333,
+    "lon": 16.618656,
+    "emoji": "🚋",
+    "lines": [
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1786Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1336Z1",
+    "name": "Lesnická",
+    "lat": 49.212474,
+    "lon": 16.617391,
+    "emoji": "🚋",
+    "lines": [
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1336Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1023Z1",
+    "name": "Bieblova",
+    "lat": 49.215995,
+    "lon": 16.615517,
+    "emoji": "🚋",
+    "lines": [
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1023Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1112Z1",
+    "name": "Fügnerova",
+    "lat": 49.219787,
+    "lon": 16.619277,
+    "emoji": "🚋",
+    "lines": [
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1112Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1128Z1",
+    "name": "Halasovo náměstí",
+    "lat": 49.223567,
+    "lon": 16.622521,
+    "emoji": "🚋",
+    "lines": [
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1128Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1069Z1",
+    "name": "Čertova rokle",
+    "lat": 49.226392,
+    "lon": 16.623627,
+    "emoji": "🚋",
+    "lines": [
+      "7"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1069Z1"
     }
   },
   {
@@ -1679,35 +2476,179 @@
     }
   },
   {
-    "id": "gtfs:U1208Z2",
-    "name": "Jírova",
-    "lat": 49.209141,
-    "lon": 16.686376,
+    "id": "gtfs:U1637Z1",
+    "name": "Šilingrovo náměstí",
+    "lat": 49.19171,
+    "lon": 16.605355,
     "emoji": "🚋",
     "lines": [
       "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1208Z2"
+      "gtfsStopId": "U1637Z1"
     }
   },
   {
-    "id": "gtfs:U1277Z2",
-    "name": "Kotlanova",
-    "lat": 49.209763,
-    "lon": 16.681048,
+    "id": "gtfs:U1146Z4",
+    "name": "Hlavní nádraží",
+    "lat": 49.19125,
+    "lon": 16.612674,
     "emoji": "🚋",
     "lines": [
       "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1277Z2"
+      "gtfsStopId": "U1146Z4"
     }
   },
   {
-    "id": "gtfs:U1368Z2",
+    "id": "gtfs:U1746Z1",
+    "name": "Vlhká",
+    "lat": 49.191847,
+    "lon": 16.618976,
+    "emoji": "🚋",
+    "lines": [
+      "8",
+      "9"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1746Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1372Z1",
+    "name": "Masná",
+    "lat": 49.191244,
+    "lon": 16.625642,
+    "emoji": "🚋",
+    "lines": [
+      "8",
+      "9"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1372Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1814Z1",
+    "name": "Životského",
+    "lat": 49.191036,
+    "lon": 16.633968,
+    "emoji": "🚋",
+    "lines": [
+      "8",
+      "9"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1814Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1116Z1",
+    "name": "Geislerova",
+    "lat": 49.19278,
+    "lon": 16.635345,
+    "emoji": "🚋",
+    "lines": [
+      "8",
+      "9"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1116Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1810Z1",
+    "name": "Židovský hřbitov",
+    "lat": 49.191354,
+    "lon": 16.641711,
+    "emoji": "🚋",
+    "lines": [
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1810Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1291Z1",
+    "name": "Krásného",
+    "lat": 49.190434,
+    "lon": 16.650066,
+    "emoji": "🚋",
+    "lines": [
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1291Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1018Z1",
+    "name": "Bělohorská",
+    "lat": 49.190201,
+    "lon": 16.6637,
+    "emoji": "🚋",
+    "lines": [
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1018Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1026Z1",
+    "name": "Bílá hora",
+    "lat": 49.194847,
+    "lon": 16.667411,
+    "emoji": "🚋",
+    "lines": [
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1026Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1347Z1",
+    "name": "Líšeňská",
+    "lat": 49.197876,
+    "lon": 16.664849,
+    "emoji": "🚋",
+    "lines": [
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1347Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1438Z1",
+    "name": "Novolíšeňská",
+    "lat": 49.202014,
+    "lon": 16.670642,
+    "emoji": "🚋",
+    "lines": [
+      "8"
+    ],
+    "source": {
+      "kind": "gtfs",
+      "gtfsStopId": "U1438Z1"
+    }
+  },
+  {
+    "id": "gtfs:U1368Z1",
     "name": "Masarova",
     "lat": 49.206997,
     "lon": 16.677557,
@@ -1717,189 +2658,49 @@
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1368Z2"
+      "gtfsStopId": "U1368Z1"
     }
   },
   {
-    "id": "gtfs:U1438Z2",
-    "name": "Novolíšeňská",
-    "lat": 49.201911,
-    "lon": 16.669965,
+    "id": "gtfs:U1277Z1",
+    "name": "Kotlanova",
+    "lat": 49.209949,
+    "lon": 16.681681,
     "emoji": "🚋",
     "lines": [
       "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1438Z2"
+      "gtfsStopId": "U1277Z1"
     }
   },
   {
-    "id": "gtfs:U1347Z2",
-    "name": "Líšeňská",
-    "lat": 49.197285,
-    "lon": 16.665584,
+    "id": "gtfs:U1208Z1",
+    "name": "Jírova",
+    "lat": 49.208552,
+    "lon": 16.686687,
     "emoji": "🚋",
     "lines": [
       "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1347Z2"
+      "gtfsStopId": "U1208Z1"
     }
   },
   {
-    "id": "gtfs:U1026Z2",
-    "name": "Bílá hora",
-    "lat": 49.194271,
-    "lon": 16.667395,
+    "id": "gtfs:U1384Z1",
+    "name": "Mifkova",
+    "lat": 49.207315,
+    "lon": 16.692496,
     "emoji": "🚋",
     "lines": [
       "8"
     ],
     "source": {
       "kind": "gtfs",
-      "gtfsStopId": "U1026Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1018Z2",
-    "name": "Bělohorská",
-    "lat": 49.190098,
-    "lon": 16.663444,
-    "emoji": "🚋",
-    "lines": [
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1018Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1291Z2",
-    "name": "Krásného",
-    "lat": 49.19067,
-    "lon": 16.649391,
-    "emoji": "🚋",
-    "lines": [
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1291Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1810Z2",
-    "name": "Židovský hřbitov",
-    "lat": 49.191517,
-    "lon": 16.641078,
-    "emoji": "🚋",
-    "lines": [
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1810Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1116Z2",
-    "name": "Geislerova",
-    "lat": 49.192754,
-    "lon": 16.634757,
-    "emoji": "🚋",
-    "lines": [
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1116Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1814Z2",
-    "name": "Životského",
-    "lat": 49.190687,
-    "lon": 16.633889,
-    "emoji": "🚋",
-    "lines": [
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1814Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1372Z2",
-    "name": "Masná",
-    "lat": 49.191283,
-    "lon": 16.6245,
-    "emoji": "🚋",
-    "lines": [
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1372Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1746Z2",
-    "name": "Vlhká",
-    "lat": 49.191852,
-    "lon": 16.619157,
-    "emoji": "🚋",
-    "lines": [
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1746Z2"
-    }
-  },
-  {
-    "id": "gtfs:U1146Z3",
-    "name": "Hlavní nádraží",
-    "lat": 49.191063,
-    "lon": 16.611972,
-    "emoji": "🚋",
-    "lines": [
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1146Z3"
-    }
-  },
-  {
-    "id": "gtfs:U1779Z1",
-    "name": "Západní brána",
-    "lat": 49.173486,
-    "lon": 16.567125,
-    "emoji": "🚋",
-    "lines": [
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1779Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1429Z1",
-    "name": "Nemocnice Bohunice",
-    "lat": 49.175849,
-    "lon": 16.567334,
-    "emoji": "🚋",
-    "lines": [
-      "8"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1429Z1"
+      "gtfsStopId": "U1384Z1"
     }
   },
   {
@@ -2026,62 +2827,6 @@
     "source": {
       "kind": "gtfs",
       "gtfsStopId": "U1073Z9"
-    }
-  },
-  {
-    "id": "gtfs:U1746Z1",
-    "name": "Vlhká",
-    "lat": 49.191847,
-    "lon": 16.618976,
-    "emoji": "🚋",
-    "lines": [
-      "9"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1746Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1372Z1",
-    "name": "Masná",
-    "lat": 49.191244,
-    "lon": 16.625642,
-    "emoji": "🚋",
-    "lines": [
-      "9"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1372Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1814Z1",
-    "name": "Životského",
-    "lat": 49.191036,
-    "lon": 16.633968,
-    "emoji": "🚋",
-    "lines": [
-      "9"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1814Z1"
-    }
-  },
-  {
-    "id": "gtfs:U1116Z1",
-    "name": "Geislerova",
-    "lat": 49.19278,
-    "lon": 16.635345,
-    "emoji": "🚋",
-    "lines": [
-      "9"
-    ],
-    "source": {
-      "kind": "gtfs",
-      "gtfsStopId": "U1116Z1"
     }
   },
   {
