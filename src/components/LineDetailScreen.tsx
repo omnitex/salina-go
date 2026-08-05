@@ -1,26 +1,32 @@
 import { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import type { Line, Stop } from '../data/schema';
 import type { UnlocksRepository } from '../lib/storage/types';
 import { StopCard } from './StopCard';
 import { ProgressBar } from './ProgressBar';
 
 interface LineDetailScreenProps {
-  line: Line;
+  lines: Line[];
   stops: Stop[];
   unlockedIds: string[];
   repo: UnlocksRepository;
-  onBack: () => void;
   onFirstUnlock?: () => void;
 }
 
 export function LineDetailScreen({
-  line,
+  lines,
   stops,
   unlockedIds,
   repo,
-  onBack,
   onFirstUnlock,
 }: LineDetailScreenProps) {
+  const { lineId } = useParams<{ lineId: string }>();
+  const line = lines.find((l) => l.id === lineId);
+
+  if (!line) {
+    return <div>Line not found</div>;
+  }
+
   const [isReversed, setIsReversed] = useState(false);
   const storageKey = `line-reversed-${line.id}`;
 
@@ -48,13 +54,12 @@ export function LineDetailScreen({
 
   return (
     <div>
-      <button
-        type="button"
-        onClick={onBack}
+      <Link
+        to="/"
         className="mb-3 flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900"
       >
         <span aria-hidden>←</span> All lines
-      </button>
+      </Link>
 
       <div
         className={[
