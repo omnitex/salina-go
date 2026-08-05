@@ -14,7 +14,7 @@ export function ProgressBar({ unlocked, total }: ProgressBarProps) {
         />
       </div>
       <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-        {unlocked}/{total} collected
+        {unlocked}/{total} stops unlocked
       </p>
     </div>
   );

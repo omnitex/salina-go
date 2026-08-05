@@ -20,7 +20,7 @@ export function Header({ unlocked, total, linesCompleted, totalLines }: HeaderPr
             {linesCompleted >= totalLines && totalLines > 0 ? (
               <span className="font-semibold text-amber-600 dark:text-amber-400">🏆 All {totalLines} lines completed!</span>
             ) : (
-              <>✓ {linesCompleted}/{totalLines} lines completed</>
+              <> {linesCompleted}/{totalLines} lines completed</>
             )}
           </p>
         </div>

@@ -84,7 +84,7 @@ export function HomeScreen() {
             Settings
           </h2>
           <p className="mt-1 text-xs text-gray-600 dark:text-gray-400">
-            Preferences & progress
+            Preferences & about
           </p>
         </Link>
       </div>
