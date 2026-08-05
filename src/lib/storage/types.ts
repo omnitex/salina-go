@@ -15,6 +15,11 @@ export interface UnlocksRepository {
   /** Clear all unlocks. */
   reset(): void;
   /**
+   * Remove stops not present in the provided valid set.
+   * Returns the number of orphaned stops removed.
+   */
+  prune(validStopIds: Set<string>): number;
+  /**
    * Subscribe to changes. Returns an unsubscribe function.
    * Used by useSyncExternalStore in the React hook.
    */

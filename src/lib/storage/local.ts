@@ -30,6 +30,14 @@ export class LocalUnlocksRepository implements UnlocksRepository {
     this.writeAndCache([]);
   }
 
+  prune(validStopIds: Set<string>): number {
+    const current = this.snapshot();
+    const pruned = current.filter((id) => validStopIds.has(id));
+    const removed = current.length - pruned.length;
+    if (removed > 0) this.writeAndCache(pruned);
+    return removed;
+  }
+
   subscribe(listener: () => void): () => void {
     this.listeners.add(listener);
     return () => { this.listeners.delete(listener); };
