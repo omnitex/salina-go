@@ -9,7 +9,7 @@ const GTFS_URL = 'https://kordis-jmk.cz/gtfs/gtfs.zip';
 
 const NEEDED_FILES = ['routes.txt', 'trips.txt', 'stop_times.txt', 'stops.txt'] as const;
 
-async function downloadAndExtract(url: string): Promise<Map<string, string>> {
+export async function downloadAndExtract(url: string): Promise<Map<string, string>> {
   const res = await fetch(url, {
     headers: { 'User-Agent': 'salina-go/0.1 (https://github.com/omnitex/salina-go)' },
   });
@@ -32,7 +32,7 @@ async function downloadAndExtract(url: string): Promise<Map<string, string>> {
   return files;
 }
 
-function buildInput(files: Map<string, string>): GtfsInput {
+export function buildInput(files: Map<string, string>): GtfsInput {
   return {
     routes: parseCsv(files.get('routes.txt') ?? ''),
     trips: parseCsv(files.get('trips.txt') ?? ''),
