@@ -1,0 +1,49 @@
+{
+  "selections": [
+    {
+      "routeId": "L1D99",
+      "patternIndex": 0
+    },
+    {
+      "routeId": "L2D99",
+      "patternIndex": 1
+    },
+    {
+      "routeId": "L3D99",
+      "patternIndex": 2
+    },
+    {
+      "routeId": "L4D99",
+      "patternIndex": 3
+    },
+    {
+      "routeId": "L5D99",
+      "patternIndex": 4
+    },
+    {
+      "routeId": "L6D99",
+      "patternIndex": 5
+    },
+    {
+      "routeId": "L7D99",
+      "patternIndex": 6
+    },
+    {
+      "routeId": "L8D99",
+      "patternIndex": 7
+    },
+    {
+      "routeId": "L9D99",
+      "patternIndex": 8
+    },
+    {
+      "routeId": "L10D99",
+      "patternIndex": 9
+    },
+    {
+      "routeId": "L12D99",
+      "patternIndex": 10
+    }
+  ],
+  "timestamp": 1785949009997
+}
