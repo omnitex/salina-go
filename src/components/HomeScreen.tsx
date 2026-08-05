@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../contexts/AppContext';
+import tramIcon from '@/assets/tram-icon.png?url';
 
 export function HomeScreen() {
   const { unlockedIds, stops } = useAppContext();
@@ -17,10 +18,7 @@ export function HomeScreen() {
           className="rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition"
         >
           <div className="flex items-center justify-between mb-2">
-            <span className="text-3xl" aria-hidden>🚋</span>
-            <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
-              {unlockedCount}/{totalStops}
-            </span>
+            <img src={tramIcon} alt="Tram" className="w-27 h-8" />
           </div>
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
             Lines
