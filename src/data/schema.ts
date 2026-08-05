@@ -19,6 +19,11 @@ export const StopSchema = z.object({
   lon: z.number(),
   emoji: z.string().optional(),
   lines: z.array(z.string()).default([]),
+  zoneId: z.string().optional(),
+  locationType: z.number().optional(),
+  parentStation: z.string().optional(),
+  wheelchairBoarding: z.number().optional(),
+  platformCode: z.string().optional(),
   source: z
     .object({
       kind: z.enum(['osm', 'gtfs', 'jdf']),

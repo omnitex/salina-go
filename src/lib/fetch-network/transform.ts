@@ -174,6 +174,11 @@ export function buildNetworkFromSelections(
       emoji: '🚋',
       source: { kind: 'gtfs', gtfsStopId: rawId },
     };
+    if (row.zone_id) stop.zoneId = row.zone_id;
+    if (row.location_type) stop.locationType = Number(row.location_type);
+    if (row.parent_station) stop.parentStation = row.parent_station;
+    if (row.wheelchair_boarding) stop.wheelchairBoarding = Number(row.wheelchair_boarding);
+    if (row.platform_code) stop.platformCode = row.platform_code;
     stops.push(stop);
   }
 
@@ -264,6 +269,11 @@ export function parseGtfsNetwork(input: GtfsInput): FetchedNetwork {
       emoji: '🚋',
       source: { kind: 'gtfs', gtfsStopId: rawId },
     };
+    if (row.zone_id) stop.zoneId = row.zone_id;
+    if (row.location_type) stop.locationType = Number(row.location_type);
+    if (row.parent_station) stop.parentStation = row.parent_station;
+    if (row.wheelchair_boarding) stop.wheelchairBoarding = Number(row.wheelchair_boarding);
+    if (row.platform_code) stop.platformCode = row.platform_code;
     stops.push(stop);
   }
 
