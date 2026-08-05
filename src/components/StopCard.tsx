@@ -65,11 +65,11 @@ export function StopCard({ stop, unlocked, repo, onFirstUnlock }: StopCardProps)
 
   if (state.kind === 'unlocked') {
     return (
-      <div className="rounded-2xl border-2 border-green-300 bg-green-50 p-4 shadow-sm">
+      <div className="rounded-2xl border-2 border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-950 p-4 shadow-sm">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-lg font-semibold text-green-900">{stop.name}</h2>
-            <p className="text-sm text-green-700">
+            <h2 className="text-lg font-semibold text-green-900 dark:text-green-100">{stop.name}</h2>
+            <p className="text-sm text-green-700 dark:text-green-300">
               ✓ Unlocked {relativeTime(state.unlockedAt)}
             </p>
           </div>
@@ -83,22 +83,22 @@ export function StopCard({ stop, unlocked, repo, onFirstUnlock }: StopCardProps)
     <div className={[
       'rounded-2xl border p-4 shadow-sm',
       state.kind === 'locked'
-        ? 'border-gray-200 bg-white'
-        : 'border-amber-200 bg-amber-50',
+        ? 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800'
+        : 'border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950',
     ].join(' ')}>
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-lg font-semibold text-gray-900">{stop.name}</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{stop.name}</h2>
           {state.kind === 'too_far' && (
-            <p className="mt-1 text-sm text-amber-700">
+            <p className="mt-1 text-sm text-amber-700 dark:text-amber-300">
               You're {Math.round(state.distanceM)} m away (±{Math.round(state.accuracyM)} m). Get closer!
             </p>
           )}
           {state.kind === 'error' && (
-            <p className="mt-1 text-sm text-red-600">{state.message}</p>
+            <p className="mt-1 text-sm text-red-600 dark:text-red-400">{state.message}</p>
           )}
           {state.kind === 'locked' && (
-            <p className="mt-1 text-sm text-gray-500">🔒 Not yet collected</p>
+            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">🔒 Not yet collected</p>
           )}
         </div>
         <div className={['text-4xl', state.kind === 'locked' ? 'opacity-40 grayscale' : ''].join(' ')} aria-hidden>
@@ -109,7 +109,7 @@ export function StopCard({ stop, unlocked, repo, onFirstUnlock }: StopCardProps)
         type="button"
         onClick={handleUnlockClick}
         disabled={state.kind === 'requesting'}
-        className="mt-3 w-full rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white shadow-sm transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-gray-400"
+        className="mt-3 w-full rounded-xl bg-blue-600 dark:bg-blue-700 px-4 py-3 font-semibold text-white shadow-sm transition hover:bg-blue-700 dark:hover:bg-blue-800 disabled:cursor-not-allowed disabled:bg-gray-400 dark:disabled:bg-gray-600"
       >
         {state.kind === 'requesting' ? 'Locating you…' : 'Unlock'}
       </button>

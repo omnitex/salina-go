@@ -33,19 +33,19 @@ export function SettingsScreen() {
     <div>
       <Link
         to="/"
-        className="mb-3 flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900"
+        className="mb-3 flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
       >
         <span aria-hidden>←</span> Back
       </Link>
 
       <div className="space-y-4">
-        <div className="rounded-2xl border-2 border-gray-200 bg-white p-4 shadow-sm">
-          <h2 className="text-lg font-semibold text-gray-900 mb-3">Appearance</h2>
+        <div className="rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-sm">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Appearance</h2>
 
           <div className="flex items-center justify-between">
             <div>
-              <p className="font-medium text-gray-900">Dark mode</p>
-              <p className="text-sm text-gray-600">Use dark theme for the interface</p>
+              <p className="font-medium text-gray-900 dark:text-white">Dark mode</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Use dark theme for the interface</p>
             </div>
             <button
               type="button"
@@ -68,29 +68,29 @@ export function SettingsScreen() {
           </div>
         </div>
 
-        <div className="rounded-2xl border-2 border-red-200 bg-red-50 p-4 shadow-sm">
-          <h2 className="text-lg font-semibold text-red-900 mb-3">Danger zone</h2>
+        <div className="rounded-2xl border-2 border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-950 p-4 shadow-sm">
+          <h2 className="text-lg font-semibold text-red-900 dark:text-red-100 mb-3">Danger zone</h2>
 
           <div className="flex items-center justify-between">
             <div>
-              <p className="font-medium text-red-900">Reset all progress</p>
-              <p className="text-sm text-red-700">
+              <p className="font-medium text-red-900 dark:text-red-100">Reset all progress</p>
+              <p className="text-sm text-red-700 dark:text-red-300">
                 Clears all unlocked stops. Cannot be undone.
               </p>
             </div>
             <button
               type="button"
               onClick={resetProgress}
-              className="rounded-lg border-2 border-red-300 bg-red-100 px-3 py-1.5 text-sm font-semibold text-red-900 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+              className="rounded-lg border-2 border-red-300 dark:border-red-800 bg-red-100 dark:bg-red-900 px-3 py-1.5 text-sm font-semibold text-red-900 dark:text-red-100 hover:bg-red-200 dark:hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
             >
               Reset
             </button>
           </div>
         </div>
 
-        <div className="rounded-2xl border-2 border-gray-200 bg-white p-4 shadow-sm">
-          <h2 className="text-lg font-semibold text-gray-900 mb-3">About</h2>
-          <p className="text-sm text-gray-700">
+        <div className="rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-sm">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">About</h2>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
             <span className="font-medium">Šalina Go</span> — Brno tram collection game.<br />
             Built with ❤️ using KORDIS JMK GTFS data.
           </p>

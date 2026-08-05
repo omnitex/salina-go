@@ -24,12 +24,12 @@ export function LinesScreen({ lines, unlockedIds }: LinesScreenProps) {
   return (
     <div>
       {allComplete && (
-        <div className="mb-4 rounded-2xl border-2 border-amber-300 bg-amber-50 p-4 text-center shadow-sm">
+        <div className="mb-4 rounded-2xl border-2 border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950 p-4 text-center shadow-sm">
           <div className="text-3xl" aria-hidden>🏆</div>
-          <p className="mt-1 font-semibold text-amber-800">
+          <p className="mt-1 font-semibold text-amber-800 dark:text-amber-200">
             You completed the entire tram network!
           </p>
-          <p className="mt-1 text-sm text-amber-700">
+          <p className="mt-1 text-sm text-amber-700 dark:text-amber-300">
             {lines.length} lines · {lines.reduce((n, l) => n + l.stopIds.length, 0)} stops collected
           </p>
         </div>

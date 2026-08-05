@@ -56,7 +56,7 @@ export function LineDetailScreen({
     <div>
       <Link
         to="/"
-        className="mb-3 flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900"
+        className="mb-3 flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
       >
         <span aria-hidden>←</span> All lines
       </Link>
@@ -64,7 +64,7 @@ export function LineDetailScreen({
       <div
         className={[
           'mb-4 rounded-2xl border-2 p-4 shadow-sm',
-          isComplete ? 'border-amber-300 bg-amber-50' : 'border-gray-200 bg-white',
+          isComplete ? 'border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950' : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800',
         ].join(' ')}
       >
         <div className="flex items-center gap-3">
@@ -76,16 +76,16 @@ export function LineDetailScreen({
             {line.id}
           </div>
           <div className="flex-1">
-            <h2 className="text-lg font-semibold text-gray-900">Line {line.name}</h2>
-            <p className="text-sm text-gray-600">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Line {line.name}</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               {unlockedCount} / {line.stopIds.length} stops
-              {isComplete && <span className="ml-2 text-amber-600 font-semibold">✓ Completed</span>}
+              {isComplete && <span className="ml-2 text-amber-600 dark:text-amber-400 font-semibold">✓ Completed</span>}
             </p>
           </div>
           <button
             type="button"
             onClick={toggleReverse}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border-2 border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
             aria-label={isReversed ? 'Show stops in original order' : 'Show stops in reverse order'}
             title={isReversed ? 'Show stops in original order' : 'Show stops in reverse order'}
           >
@@ -109,6 +109,10 @@ export function LineDetailScreen({
           </li>
         ))}
       </ul>
+
+      <footer className="mt-8 px-4 py-4 text-center text-xs text-gray-400 dark:text-gray-600">
+        Data: KORDIS JMK · OSM contributors
+      </footer>
     </div>
   );
 }

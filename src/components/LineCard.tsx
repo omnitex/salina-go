@@ -30,8 +30,8 @@ export function LineCard({ line, unlockedCount, onSelect }: LineCardProps) {
       className={[
         'flex w-full items-center gap-3 rounded-2xl border p-3 text-left shadow-sm transition',
         isComplete
-          ? 'border-amber-300 bg-amber-50 hover:bg-amber-100'
-          : 'border-gray-200 bg-white hover:bg-gray-50',
+          ? 'border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950 hover:bg-amber-100 dark:hover:bg-amber-900'
+          : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700',
       ].join(' ')}
     >
       <div
@@ -43,9 +43,9 @@ export function LineCard({ line, unlockedCount, onSelect }: LineCardProps) {
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-2">
-          <h3 className="font-semibold text-gray-900 truncate">Line {line.name}</h3>
+          <h3 className="font-semibold text-gray-900 dark:text-white truncate">Line {line.name}</h3>
           {isComplete && (
-            <span className="shrink-0 text-amber-600 font-semibold" aria-label="Completed">
+            <span className="shrink-0 text-amber-600 dark:text-amber-400 font-semibold" aria-label="Completed">
               ✓
             </span>
           )}
