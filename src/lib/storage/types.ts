@@ -10,6 +10,8 @@ export interface UnlocksRepository {
   isUnlocked(stopId: string): boolean;
   /** All unlocked stop ids, in insertion order. */
   list(): string[];
+  /** Get the timestamp when a stop was unlocked, or null if not unlocked. */
+  getUnlockedAt(stopId: string): Date | null;
   /** Mark a stop as unlocked. Idempotent. */
   unlock(stopId: string): void;
   /** Clear all unlocks. */

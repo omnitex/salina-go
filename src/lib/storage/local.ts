@@ -2,9 +2,15 @@ import type { UnlocksRepository } from './types';
 
 const STORAGE_KEY = 'salina-go:unlocks';
 
+interface UnlockRecord {
+  id: string;
+  unlockedAt: string;
+}
+
 export class LocalUnlocksRepository implements UnlocksRepository {
   private readonly listeners = new Set<() => void>();
-  private cachedList: string[] | null = null;
+  private cachedList: UnlockRecord[] | null = null;
+  private cachedStringList: string[] | null = null;
   private readonly storage: Storage;
 
   constructor(storage: Storage = localStorage) {
@@ -12,17 +18,27 @@ export class LocalUnlocksRepository implements UnlocksRepository {
   }
 
   isUnlocked(stopId: string): boolean {
-    return this.snapshot().includes(stopId);
+    return this.snapshot().some((r) => r.id === stopId);
   }
 
   list(): string[] {
-    return this.snapshot();
+    const records = this.snapshot();
+    if (this.cachedStringList === null) {
+      this.cachedStringList = records.map((r) => r.id);
+    }
+    return this.cachedStringList;
+  }
+
+  getUnlockedAt(stopId: string): Date | null {
+    const record = this.snapshot().find((r) => r.id === stopId);
+    if (!record) return null;
+    return new Date(record.unlockedAt);
   }
 
   unlock(stopId: string): void {
     const current = this.snapshot();
-    if (current.includes(stopId)) return;
-    const next = [...current, stopId];
+    if (current.some((r) => r.id === stopId)) return;
+    const next = [...current, { id: stopId, unlockedAt: new Date().toISOString() }];
     this.writeAndCache(next);
   }
 
@@ -32,7 +48,7 @@ export class LocalUnlocksRepository implements UnlocksRepository {
 
   prune(validStopIds: Set<string>): number {
     const current = this.snapshot();
-    const pruned = current.filter((id) => validStopIds.has(id));
+    const pruned = current.filter((r) => validStopIds.has(r.id));
     const removed = current.length - pruned.length;
     if (removed > 0) this.writeAndCache(pruned);
     return removed;
@@ -43,16 +59,17 @@ export class LocalUnlocksRepository implements UnlocksRepository {
     return () => { this.listeners.delete(listener); };
   }
 
-  private snapshot(): string[] {
+  private snapshot(): UnlockRecord[] {
     if (this.cachedList === null) {
       this.cachedList = this.read();
     }
     return this.cachedList;
   }
 
-  private writeAndCache(next: string[]): void {
+  private writeAndCache(next: UnlockRecord[]): void {
     this.storage.setItem(STORAGE_KEY, JSON.stringify(next));
     this.cachedList = next;
+    this.cachedStringList = next.map((r) => r.id);
     this.emit();
   }
 
@@ -60,13 +77,34 @@ export class LocalUnlocksRepository implements UnlocksRepository {
     for (const listener of this.listeners) listener();
   }
 
-  private read(): string[] {
+  private read(): UnlockRecord[] {
     try {
       const raw = this.storage.getItem(STORAGE_KEY);
       if (!raw) return [];
+
       const parsed: unknown = JSON.parse(raw);
-      if (!Array.isArray(parsed)) return [];
-      return parsed.filter((x): x is string => typeof x === 'string');
+
+      if (Array.isArray(parsed)) {
+        if (parsed.length === 0) return [];
+
+        const first = parsed[0];
+
+        if (typeof first === 'string') {
+          const migrated = parsed.map((id): UnlockRecord => ({ id, unlockedAt: new Date().toISOString() }));
+          this.writeAndCache(migrated);
+          return migrated;
+        }
+
+        if (parsed.every((x): x is UnlockRecord =>
+          typeof x === 'object' && x !== null &&
+          'id' in x && typeof x.id === 'string' &&
+          'unlockedAt' in x && typeof x.unlockedAt === 'string'
+        )) {
+          return parsed;
+        }
+      }
+
+      return [];
     } catch {
       return [];
     }

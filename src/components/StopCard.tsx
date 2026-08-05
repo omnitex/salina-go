@@ -39,9 +39,15 @@ function friendlyGeoMessage(err: GeoError): string {
 }
 
 export function StopCard({ stop, unlocked, repo, onFirstUnlock }: StopCardProps) {
-  const [state, setState] = useState<UnlockState>(
-    unlocked ? { kind: 'unlocked', unlockedAt: new Date() } : { kind: 'locked' },
-  );
+  const [state, setState] = useState<UnlockState>(() => {
+    if (unlocked) {
+      const unlockedAt = repo.getUnlockedAt(stop.id);
+      if (unlockedAt) {
+        return { kind: 'unlocked', unlockedAt };
+      }
+    }
+    return { kind: 'locked' };
+  });
 
   async function handleUnlockClick() {
     setState({ kind: 'requesting' });
